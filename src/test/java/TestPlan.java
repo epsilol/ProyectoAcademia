@@ -5,10 +5,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
-//esta es una pr
-//tercer cambio de René
-//otro comentario
-//Comentario de luis
+
 public class TestPlan {
     private static final WebDriver driver = new ChromeDriver();
 

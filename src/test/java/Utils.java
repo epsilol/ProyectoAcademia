@@ -4,20 +4,22 @@ public class Utils {
     final static String BASE_URL = "http://automationpractice.com/index.php";
     final static String CHROME_DRIVER_LOCATION = "chromedriver";
 
-    /* USER INFO
-    E-Mail: CarlosNoEsta@hotmail.com
-    Contraseña: 1234qwer
-    First Name: Carlos
-    Last Name: Sangron
-    Company: Accenture
-    Address: Calle Flor 5258, Colonia Florida
-    City: Monterrey
-    State: Alabama
-    Zip/Postal Code: 49100
-    Country: United States
-    Mobile Phone: 1234567890
-    Assign an adress alias for future reference: Casa
-     */
+    // User data
+    final static String USER_EMAIL = "CarlosNoEsta@hotmail.com";
+    final static String USER_PASSWORD = "1234qwer";
+    final static String USER_NAME = "Carlos";
+    final static String USER_LASTNAME = "Blood";
+    final static String USER_COMPANY = "Accenture";
+    final static String USER_ADDRESS = "Calle Flor 5258, Colonia Florida";
+    final static String USER_CITY = "Monterrey";
+    final static String USER_STATE = "Alabama";
+    final static int USER_ZIP = 49100;
+    final static String USER_COUNTRY = "United States";
+    final static int USER_MOBILE_PHONE = 1234567890;
+    final static String USER_ALIAS = "Casa";
+
+
+
 
 
 }

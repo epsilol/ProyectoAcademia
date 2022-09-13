@@ -5,7 +5,9 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
-//esta es una prueba del git
+//esta es una pr
+
+//otro comentario
 public class TestPlan {
     private static final WebDriver driver = new ChromeDriver();
 

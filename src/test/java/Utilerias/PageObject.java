@@ -1,4 +1,4 @@
-// All Test Pages are inheriting from this class
+package Utilerias;// All Test Pages are inheriting from this class
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;

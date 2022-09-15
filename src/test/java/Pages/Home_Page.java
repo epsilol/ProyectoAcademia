@@ -32,8 +32,15 @@ public class Home_Page extends PageObject {
 
     //AQUI PUEDEN PONER SUS OBJETOS RECUERDEN PONERLOS PUBLIC STATIC
 
-    @FindBy(xpath = "//div[@class='login']") //busca el elemento con clase login que es el boton de login
+    @FindBy(className = "login") //busca el elemento con clase login que es el boton de login
     public static WebElement Sign_in;
+
+   // selenium find element using xpath position
+    @FindBy(xpath = "//a[contains(text(),'Add to cart')]")
+    public static WebElement Add_to_cart;
+
+
+
 
 
 

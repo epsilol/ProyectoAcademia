@@ -2,45 +2,46 @@ package Steps;
 
 
 import Pages.Home_Page;
+import Pages.Login;
+import Utilerias.Accounts;
 
 import java.util.concurrent.TimeUnit;
 
 import static Test.User_Story_Tests_7.driver;
 
 public class User_Story_Step_7 {
-    
 
 
 
-    public void enterFirstName(){
-        
-        Home_Page.first_name.sendKeys(Home_Page.FIRST_NAME);
-       
+
+    public void ClickSignIn(){
+
+        Home_Page.Sign_in.click();
+
+
     }
 
-    public void enterLastName(){
-
-        Home_Page.last_name.sendKeys(Home_Page.LAST_NAME);
-       
+    public void EnterUser(){
+        Login.email.sendKeys(Accounts.EMAIL);
     }
 
-    public void enterJobTitle(){
 
-        Home_Page.job_title.sendKeys(Home_Page.JOB_TITLE);
-       
+    public void EnterPassword(){
+        Login.password.sendKeys(Accounts.PASSWORD);
     }
 
-    public void pressSubmitButton(){
-        Home_Page.submit_button.click();
-        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+    public void SubmitButton(){
+        Login.submit_button.click();
+    }
+    //click on homepage login button
+
+    public void AddtoCart(){
+        Home_Page.Add_to_cart.click();
     }
 
-    public void verifyAlertSuccess(){
-
-        Home_Page.alertSuccess.isDisplayed();
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-    }
-
+   // public void EnterUser(){
+   //    Home_Page.email.sendKeys("renegahe@gmail.com");
+   // }
 
 }
 

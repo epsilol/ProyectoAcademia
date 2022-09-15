@@ -1,6 +1,6 @@
 package Test;
 
-
+import Pages.Login;
 import Pages.Home_Page;
 import Steps.User_Story_Step_7;
 import Utilerias.Utils;
@@ -19,17 +19,18 @@ public class User_Story_Tests_7 {
             System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-    @Test(testName = "Submit a Pages.Home_Page") // poner aqui de que se trata caso de prueba
-    public static void addProducts(){     //submit form cambiar nombre de funcion NO LLAMARSE IGUAL
+
+    @Test(testName = "R7.1  “Cart” button has products and signed in successfully.") // poner aqui de que se trata caso de prueba
+    public static void userLogin(){     // cambiar nombre de funcion NO LLAMARSE IGUAL
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
-        User_Story_Step_7 Shop = new User_Story_Step_7();
-        Shop.enterFirstName();
-        Shop.enterLastName();
-        Shop.enterJobTitle();
-        Shop.pressSubmitButton();
-
-       Shop.verifyAlertSuccess();
+        Login Login = new Login(driver);
+        User_Story_Step_7 LogUser = new User_Story_Step_7();
+        LogUser.ClickSignIn();
+        LogUser.EnterUser();
+        LogUser.EnterPassword();
+        LogUser.SubmitButton();
+        LogUser.AddtoCart();
     }
 
     @AfterSuite

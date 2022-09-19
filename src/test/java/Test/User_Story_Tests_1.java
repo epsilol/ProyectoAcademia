@@ -20,17 +20,11 @@ public class User_Story_Tests_1 {
             System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-    @Test(testName = "Submit a Pages.Home_Page") // poner aqui de que se trata caso de prueba
+    @Test(testName = "Submit a Pages.Home_Page") // Entrar con un URL modificado
     public static void addProducts(){     //submit form cambiar nombre de funcion NO LLAMARSE IGUAL
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
-        User_Story_Step_1 Shop = new User_Story_Step_1();
-        Shop.enterFirstName();
-        Shop.enterLastName();
-        Shop.enterJobTitle();
-        Shop.pressSubmitButton();
 
-       Shop.verifyAlertSuccess();
     }
 
     @AfterSuite

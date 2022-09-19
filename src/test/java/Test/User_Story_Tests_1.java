@@ -32,6 +32,12 @@ public class User_Story_Tests_1 {
         Home_Page Home_Page = new Home_Page(driver);
     }
 
+    @Test(testName = "R.1 Maintenance") // Display 508 error
+    public static void reachResourceLimit(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+    }
+
     @AfterSuite
     public static void cleanUp(){
         driver.manage().deleteAllCookies();

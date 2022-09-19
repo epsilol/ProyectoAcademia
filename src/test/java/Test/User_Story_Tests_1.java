@@ -20,11 +20,12 @@ public class User_Story_Tests_1 {
             System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-    @Test(testName = "Submit a Pages.Home_Page") // Entrar con un URL modificado
-    public static void addProducts(){     //submit form cambiar nombre de funcion NO LLAMARSE IGUAL
-        driver.get(Utils.BASE_URL);
+    @Test(testName = "R.1 Page Not Found") // Enter with a modified URL
+    public static void enterModifiedPage(){
+        driver.get(Utils.MODIFIED_URL);
         Home_Page Home_Page = new Home_Page(driver);
-
+        User_Story_Step_1 Enter = new User_Story_Step_1();
+        Enter.timeOutStep1();
     }
 
     @AfterSuite

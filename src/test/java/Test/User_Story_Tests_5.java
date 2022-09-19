@@ -1,7 +1,7 @@
 package Test;
 
 
-import Pages.Home_Page;
+import Pages.Shopping_Cart;
 import Steps.User_Story_Step_5;
 import Utilerias.Utils;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
 
 public class User_Story_Tests_5 {
     public static final WebDriver driver = new ChromeDriver();
@@ -19,18 +21,25 @@ public class User_Story_Tests_5 {
             System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-    @Test(testName = "Submit a Pages.Home_Page") // poner aqui de que se trata caso de prueba
-    public static void addProducts(){     //submit form cambiar nombre de funcion NO LLAMARSE IGUAL
+    @Test(testName = "Click in the cart button") // poner aqui de que se trata caso de prueba
+    public static void clickCartButton(){     //submit form cambiar nombre de funcion NO LLAMARSE IGUAL
         driver.get(Utils.BASE_URL);
-        Home_Page Home_Page = new Home_Page(driver);
-        User_Story_Step_5 Shop = new User_Story_Step_5();
-        Shop.enterFirstName();
-        Shop.enterLastName();
-        Shop.enterJobTitle();
-        Shop.pressSubmitButton();
-
-       Shop.verifyAlertSuccess();
+        Shopping_Cart Home_Page = new Shopping_Cart(driver);
+        User_Story_Step_5 cart = new User_Story_Step_5();
+        cart.clickButtonCart();
     }
+
+    @Test(testName = "add an item to the cart")
+    public static void addItem(){
+        driver.get(Utils.BASE_URL);
+        Shopping_Cart Home_Page = new Shopping_Cart(driver);
+        User_Story_Step_5 cart = new User_Story_Step_5();
+        cart.addItem();
+       
+    }
+
+
+
 
     @AfterSuite
     public static void cleanUp(){

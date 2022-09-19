@@ -19,6 +19,11 @@ public class User_Story_Step_5 {
 
     }
 
+    public void verityAlertSuccess(){
+        driver.manage().timeouts().implicitlyWait(300,TimeUnit.SECONDS);
+        Shopping_Cart.AlertSuccess.isDisplayed();
+
+    }
 
 
 

@@ -25,7 +25,6 @@ public class User_Story_Tests_2 {
 
 
     }
-
     @Test(testName = "Page Navigation")
     public static void productDetails(){
         driver.get(Utils.BASE_URL);
@@ -40,7 +39,6 @@ public class User_Story_Tests_2 {
 
 
     }
-
     @AfterSuite
     public static void cleanUp(){
         driver.manage().deleteAllCookies();

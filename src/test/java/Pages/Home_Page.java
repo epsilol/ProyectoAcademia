@@ -59,6 +59,9 @@ public class Home_Page extends PageObject {
     @FindBy(id = "header_logo")
     public static WebElement Logo;
 
+    @FindBy(xpath = "//*[@id='header']/div[2]/div/div/nav/div[1]/a")
+    public static WebElement View_My_Costumer_Account;
+
 
     public Home_Page(WebDriver driver) {
         super(driver);

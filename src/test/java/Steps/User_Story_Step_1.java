@@ -21,25 +21,6 @@ public class User_Story_Step_1 {
 
     }
 
-    public void openTab(){
-        //Opens first tab
-        driver.get(Utils.BASE_URL);
-        ((JavascriptExecutor)driver).executeScript("window.open()");
-        ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1)); //Switches to new tab
-        driver.get(Utils.BASE_URL);
-
-        ((JavascriptExecutor)driver).executeScript("window.open()");
-        ArrayList<String> tabs1 = new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(tabs1.get(2)); //Switches to new tab
-        driver.get(Utils.BASE_URL);
-
-        ((JavascriptExecutor)driver).executeScript("window.open()");
-        ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(tabs2.get(3)); //Switches to new tab
-        driver.get(Utils.BASE_URL);
-    }
-
 }
 
 

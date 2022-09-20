@@ -36,8 +36,6 @@ public class User_Story_Tests_1 {
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
     }
-
-
     @AfterSuite
     public static void cleanUp(){
         driver.manage().deleteAllCookies();

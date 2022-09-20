@@ -52,7 +52,10 @@ public class User_Story_Tests_4 {
         LogUser.EnterPassword();
         LogUser.CheckMailOk();
         LogUser.SubmitButton();
-        LogUser.ClickShopCart();
+        // LogUser.ClickShopCart();
+        // LogUser.ClickHomeBot();
+        LogUser.ClickHomeUp();
+
 
     }
 

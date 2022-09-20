@@ -47,3 +47,8 @@ public class Personal_Information extends PageObject {
     public static WebElement save_info;
 
 }
+
+    public Personal_Information (WebDriver driver) {
+        super(driver);
+    }
+}

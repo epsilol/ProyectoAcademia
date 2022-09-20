@@ -9,30 +9,28 @@ import static Test.User_Story_Tests_7.driver;
 
 public class User_Story_Step_2 {
 
-    public void enterFirstName(){
-
-        Home_Page.first_name.sendKeys(Home_Page.FIRST_NAME);
-
-    }
-
-    public void dressSearch() throws InterruptedException {
-
+    public void dressSearch() {
         Home_Page.Search_Bar.click();
-        Thread.sleep(5000);
         Home_Page.Search_Bar.sendKeys("PRINTED DRESS");
-
         Home_Page.Submit_Button_Search_Bar.click();
+    }
 
+    public void navDresses(){
 
+    }
+    public void navTshirts(){
+
+    }public void navWomen(){
 
     }
 
-    public void pressSubmitButton(){
-        Home_Page.submit_button.click();
-        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+
+    public void gridDetails(){
+
     }
+    public void listDetails(){
 
-
+    }
 
 }
 

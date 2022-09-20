@@ -39,7 +39,8 @@ public class User_Story_Tests_2 {
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
         Thread.sleep(5000);
-        User_Story_Step_2 dressSearch = new User_Story_Step_2();
+        User_Story_Step_2 Search = new User_Story_Step_2();
+        Search.dressSearch();
         Thread.sleep(5000);
 
 

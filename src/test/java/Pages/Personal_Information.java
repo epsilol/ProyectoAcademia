@@ -46,8 +46,7 @@ public class Personal_Information extends PageObject {
     @FindBy(xpath = "//*[@id='center_column']/div/form/fieldset/div[11]/button/span")
     public static WebElement save_info;
 
-}
-
     public Personal_Information (WebDriver driver) {
         super(driver);
+    }
     }

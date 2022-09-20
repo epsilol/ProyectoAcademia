@@ -22,7 +22,26 @@ public class My_Account extends PageObject {
     @FindBy(css = "#header > div:nth-child(3) > div > div > div:nth-child(3) > div > a")
     public static WebElement shopping_cart;
 
-    // indicadores extras
+    @FindBy(xpath = "//*[@class = 'lnk_wishlist']//a")
+    public static WebElement my_wishlist;
+
+    @FindBy(xpath = "//*[@class = 'icon-list-ol']")
+    public static WebElement order_history_details;
+
+    @FindBy(xpath = "//*[@class = 'icon-ban-circle']")
+    public static WebElement credit_slips;
+
+    @FindBy(xpath = "//*[@class = 'icon-building']")
+    public static WebElement my_addresses;
+
+    @FindBy(xpath = "//*[@class = 'icon-user']")
+    public static WebElement personal_info;
+
+    @FindBy(xpath = "//*[@class = 'icon-chevron-left']")
+    public static WebElement home_bot;
+
+    @FindBy(xpath = "//*[@class = 'icon-home']")
+    public static WebElement home_up;
 
     @FindBy(xpath = "//a[class='login']")
     public static WebElement signIn_button;

@@ -11,6 +11,11 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import java.lang.annotation.Repeatable;
+import java.util.concurrent.TimeUnit;
+
+import static Test.User_Story_Tests_5.driver;
+
 public class User_Story_Tests_1 {
     public static final WebDriver driver = new ChromeDriver();
 
@@ -32,11 +37,6 @@ public class User_Story_Tests_1 {
         Home_Page Home_Page = new Home_Page(driver);
     }
 
-    @Test(testName = "R.1 Maintenance") // Display 508 error
-    public static void reachResourceLimit(){
-        driver.get(Utils.BASE_URL);
-        Home_Page Home_Page = new Home_Page(driver);
-    }
 
     @AfterSuite
     public static void cleanUp(){

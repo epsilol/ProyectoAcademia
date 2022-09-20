@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.nio.channels.Selector;
+
 public class Home_Page extends PageObject {
 
     public static String FIRST_NAME = "José";
@@ -39,7 +41,11 @@ public class Home_Page extends PageObject {
     @FindBy(xpath = "//a[contains(text(),'Add to cart')]")
     public static WebElement Add_to_cart;
 
+    @FindBy(id = "//*[@id='searchbox']/button")
+    public static WebElement Submit_Button_Search_Bar;
 
+    @FindBy(id ="id=search_query_top")
+    public static WebElement Search_Bar;
 
 
 

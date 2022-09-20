@@ -9,24 +9,21 @@ import static Test.User_Story_Tests_7.driver;
 
 public class User_Story_Step_2 {
 
-
-
-
     public void enterFirstName(){
 
         Home_Page.first_name.sendKeys(Home_Page.FIRST_NAME);
 
     }
 
-    public void enterLastName(){
+    public void dressSearch() throws InterruptedException {
 
-        Home_Page.last_name.sendKeys(Home_Page.LAST_NAME);
+        Home_Page.Search_Bar.click();
+        Thread.sleep(5000);
+        Home_Page.Search_Bar.sendKeys("PRINTED DRESS");
 
-    }
+        Home_Page.Submit_Button_Search_Bar.click();
 
-    public void enterJobTitle(){
 
-        Home_Page.job_title.sendKeys(Home_Page.JOB_TITLE);
 
     }
 
@@ -35,10 +32,6 @@ public class User_Story_Step_2 {
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
     }
 
-    public void verifyAlertSuccess(){
-        Home_Page.alertSuccess.isDisplayed();
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-    }
 
 
 }

@@ -2,6 +2,8 @@ package Test;
 
 import Pages.Home_Page;
 import Steps.User_Story_Step_1;
+import Steps.User_Story_Step_2;
+import Steps.User_Story_Step_3;
 import Utilerias.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,17 +27,22 @@ public class User_Story_Tests_2 {
 
 
     }
-    @Test(testName = "Page Navigation")
+    @Test(testName = "Product Details")
     public static void productDetails(){
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
 
 
     }
-    @Test(testName = "Page Navigation")
-    public static void browseProducts(){
+    @Test(testName = "Browse Products")
+    public static void browseProducts() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
+        Thread.sleep(5000);
+        User_Story_Step_2 dressSearch = new User_Story_Step_2();
+        Thread.sleep(5000);
+
+
 
 
     }

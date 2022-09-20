@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class Personal_Information extends PageObject {
 
+    //Objetos de la pagina "Your Personal Information" para requirement 11
+
 
 
 }

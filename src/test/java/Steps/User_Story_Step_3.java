@@ -13,15 +13,17 @@ public class User_Story_Step_3 {
 
     public void clickSignIn(){
         Home_Page.Sign_in.click();
+        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
     }
     public void enterEmailCreated(){
 
-        Registration.email_create.sendKeys(Registration.EMAIL_CREATE);
+        Registration.email_create.sendKeys(Registration.EMAIL_NEWACC);
     }
 
     public void clickCreateAnAccount(){
 
         Registration.createAnAccountbtn.click();
+        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
     }
 
     public void pressMr(){
@@ -32,6 +34,7 @@ public class User_Story_Step_3 {
     public void pressMrs(){
 
         Registration.Mrsbutton.click();
+        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
     }
 
     public void enterFirstName(){
@@ -52,6 +55,28 @@ public class User_Story_Step_3 {
 
     }
 
+    public void enterPassword(){
+        Registration.password.sendKeys(Registration.PASSWORD);
+    }
+
+    public void enterDayOfBirth(){
+        Registration.day.sendKeys(Registration.DAY);
+    }
+
+    public void enterMonthOfBirth(){
+        Registration.month.sendKeys(Registration.MONTH);
+    }
+
+    public void enterYearOfBirth(){
+        Registration.year.sendKeys(Registration.YEAR);
+    }
+
+    public void clickNewsletter(){
+        Registration.newsletter_check.click();
+    }
+    public void clickOffers(){
+        Registration.offers_check.click();
+    }
     public void pressSubmitButton(){
         Home_Page.submit_button.click();
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);

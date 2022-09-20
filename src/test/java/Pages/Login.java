@@ -23,6 +23,9 @@ public class Login extends PageObject {
     @FindBy(xpath = "//*[@class='form-group form-error']")
     public static WebElement mail_error_not;
 
+    @FindBy(xpath = "//*[@class='form-group form-ok']")
+    public static WebElement mail_ok_not;
+
     @FindBy(xpath = "//*[@class = 'alert alert-danger']//ol//li[contains(text(),'Invalid email address')]")
     public static WebElement invalid_mail_not;
 
@@ -31,6 +34,12 @@ public class Login extends PageObject {
 
     @FindBy(xpath = "//*[@class = 'alert alert-danger']//ol//li[contains(text(),'An email address required')]")
     public static WebElement email_address_required;
+
+    @FindBy(xpath = "//*[@class = 'alert alert-danger']//ol//li[contains(text(),'Password is required')]")
+    public static WebElement password_required;
+
+    @FindBy(xpath = "//*[@class = 'alert alert-danger']//ol//li[contains(text(),'Authentication failed')]")
+    public static WebElement authentication_failed;
 
     public Login(WebDriver driver) {
         super(driver);

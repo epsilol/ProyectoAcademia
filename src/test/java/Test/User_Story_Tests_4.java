@@ -2,6 +2,7 @@ package Test;
 
 import Pages.Home_Page;
 import Pages.Login;
+import Pages.My_Account;
 import Steps.User_Story_Step_4;
 import Utilerias.Accounts;
 import Utilerias.Utils;
@@ -39,6 +40,22 @@ public class User_Story_Tests_4 {
 
     }
 
+    @Test(testName = "R4.2 Valid login")
+    public static void userCredentialsValid(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+        Login Login = new Login(driver);
+        My_Account MyAccount = new My_Account(driver);
+        User_Story_Step_4 LogUser = new User_Story_Step_4();
+        LogUser.ClickSignIn();
+        LogUser.EnterUser();
+        LogUser.EnterPassword();
+        LogUser.CheckMailOk();
+        LogUser.SubmitButton();
+        LogUser.ClickShopCart();
+
+    }
+
     @Test(testName = "R4.3.0.1 Login with required files: no data")
     public static void userNoCredentials(){
         driver.get(Utils.BASE_URL);
@@ -60,6 +77,20 @@ public class User_Story_Tests_4 {
         LogUser.ClickSignIn();
         LogUser.EnterPassword();
         LogUser.SubmitButton();
+        LogUser.NoAddressMessage();
+
+    }
+
+    @Test(testName = "R4.3.0.3 Login with required files: no password")
+    public static void userNoPass(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+        Login Login = new Login(driver);
+        User_Story_Step_4 LogUser = new User_Story_Step_4();
+        LogUser.ClickSignIn();
+        LogUser.EnterUser();
+        LogUser.SubmitButton();
+        LogUser.NoPassMessage();
 
     }
 
@@ -92,11 +123,25 @@ public class User_Story_Tests_4 {
 
     }
 
+    @Test(testName = "R4.3.2 Authentication failure")
+    public static void userNoAccount(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+        Login Login = new Login(driver);
+        User_Story_Step_4 LogUser = new User_Story_Step_4();
+        LogUser.ClickSignIn();
+        LogUser.EnterUserNoAccount();
+        LogUser.EnterPasswordNoAccount();
+        LogUser.SubmitButton();
+        LogUser.AuthFailed();
+
+    }
+
 
 
     @AfterSuite
     public static void cleanUp(){
         driver.manage().deleteAllCookies();
-        driver.close();
+        //driver.close();
     }
 }

@@ -10,6 +10,10 @@ public class Search_Page extends PageObject{
         super(driver);
     }
 
+    @FindBy(id = "grid")
+    public static WebElement Grid_Button;
+    @FindBy(id = "list")
+    public static WebElement List_Button;
 
 
 

@@ -2,6 +2,7 @@ package Steps;
 
 
 import Pages.Home_Page;
+import Pages.Search_Page;
 
 import java.util.concurrent.TimeUnit;
 
@@ -32,11 +33,13 @@ public class User_Story_Step_2 {
     }
 
 
-    public void gridDetails(){
-
+    public void gridDetails()throws InterruptedException{
+        Thread.sleep(1000);
+        Search_Page.Grid_Button.click();
     }
-    public void listDetails(){
-
+    public void listDetails() throws InterruptedException {
+        Thread.sleep(1000);
+        Search_Page.List_Button.click();
     }
 
 }

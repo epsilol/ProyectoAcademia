@@ -1,9 +1,13 @@
 package Pages;
 
 import Utilerias.PageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+
+import static Test.User_Story_Tests_3.driver;
 
 public class Registration extends PageObject {
 
@@ -15,8 +19,21 @@ public class Registration extends PageObject {
     public static String MONTH = "October";
     public static String YEAR = "1997";
 
+    public static String COMPANY = "TEST CO";
+
     //password minimo 5 caracteres y acepta mayusculas, minusculas y caracteres especiales
     public static String PASSWORD = "Test123*";
+    public static String ADDRESS_1 = "Av. siempre viva 777";
+    public static String ADDRESS_2 = "Independencia";
+    public static String CITY = "Dallas";
+    public static String STATE = "Texas";
+    public static String POSTAL_CODE = "2345";
+    public static String COUNTRY = "United States";
+    public static String ADDINFO = "Test";
+    public static String HOME_PHONE = "1234567890";
+    public static String MOBILE_PHONE = "1234567890";
+    public static String ALIAS = "Home";
+
 
 
     @FindBy(xpath = "//input[@id='email_create']")
@@ -32,7 +49,7 @@ public class Registration extends PageObject {
     @FindBy(id = "id_gender1")
     public static WebElement Mrbutton;
 
-    @FindBy(id = "uniform-id_gender2")
+    @FindBy(id = "id_gender2")
     public static WebElement Mrsbutton;
 
     @FindBy(id = "customer_firstname")
@@ -49,6 +66,7 @@ public class Registration extends PageObject {
 
     @FindBy(id = "days")
     public static WebElement day;
+
 
     @FindBy(id = "months")
     public static WebElement month;
@@ -92,6 +110,9 @@ public class Registration extends PageObject {
     @FindBy(id = "other")
     public static WebElement add_Info;
 
+    @FindBy(xpath = "//p[contains(text(),'You must register at least one phone number.')]")
+    public static WebElement phoneMessage;
+
     @FindBy(id = "phone")
     public static WebElement home_phone;
 
@@ -103,6 +124,16 @@ public class Registration extends PageObject {
 
     @FindBy(id = "submitAccount")
     public static WebElement register;
+
+    @FindBy(xpath = "//span[contains(text(),'Required field')]")
+    public static WebElement requiredMessage;
+
+    @FindBy(xpath = "///h1[contains(text(),'Create an account')]")
+    public static WebElement createAnAccountHeader;
+
+    @FindBy(xpath = "//h3[contains(text(),'Your personal information')]")
+    public static WebElement personalInfoHeader;
+
 
     public Registration(WebDriver driver) {
         super(driver);

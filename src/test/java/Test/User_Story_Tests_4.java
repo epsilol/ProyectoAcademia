@@ -51,6 +51,18 @@ public class User_Story_Tests_4 {
 
     }
 
+    @Test(testName = "R4.3.0.2 Login with required files: no email")
+    public static void userNoEmail(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+        Login Login = new Login(driver);
+        User_Story_Step_4 LogUser = new User_Story_Step_4();
+        LogUser.ClickSignIn();
+        LogUser.EnterPassword();
+        LogUser.SubmitButton();
+
+    }
+
     @Test(testName = "R4.3.1.1 Invalid email")
     public static void userEmailWrong(){
         driver.get(Utils.BASE_URL);
@@ -85,6 +97,6 @@ public class User_Story_Tests_4 {
     @AfterSuite
     public static void cleanUp(){
         driver.manage().deleteAllCookies();
-        //driver.close();
+        driver.close();
     }
 }

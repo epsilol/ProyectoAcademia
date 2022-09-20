@@ -7,11 +7,17 @@ import org.openqa.selenium.support.FindBy;
 
 public class Registration extends PageObject {
 
-    public static String EMAIL_CREATE = "danna@test.com";
+    public static String EMAIL_NEWACC = "danna@test.com";
     public static String FIRST_NAME = "Danna";
     public static String LAST_NAME = "López";
     public static String EMAIL = "danna@test.com";
-    public static String JOB_TITLE = "Ingeniero en Sistemas";
+    public static String DAY = "11";
+    public static String MONTH = "October";
+    public static String YEAR = "1997";
+
+    //password minimo 5 caracteres y acepta mayusculas, minusculas y caracteres especiales
+    public static String PASSWORD = "Test123*";
+
 
     @FindBy(id = "email_create")
     public static WebElement email_create;

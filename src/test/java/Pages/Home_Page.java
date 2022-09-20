@@ -42,12 +42,6 @@ public class Home_Page extends PageObject {
 
 
 
-
-
-    @FindBy(xpath = "//a[class='login']")
-    public static WebElement signIn_button;
-
-
     public Home_Page(WebDriver driver) {
         super(driver);
     }

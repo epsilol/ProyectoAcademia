@@ -2,11 +2,13 @@ package Test;
 
 
 import Pages.Home_Page;
+import Pages.Registration;
 import Steps.User_Story_Step_1;
 import Steps.User_Story_Step_3;
 import Utilerias.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -23,8 +25,54 @@ public class User_Story_Tests_3 {
     @Test(testName = "R.3.1 General Rules") // Authentication
     public static void createAnAccountPage(){
         driver.get(Utils.BASE_URL);
+        Registration reg = new Registration(driver);
         Home_Page Home_Page = new Home_Page(driver);
         User_Story_Step_3 registration = new User_Story_Step_3();
+        //Ingresa primero a login page
+        Home_Page.Sign_in.click();
+        //Ingresa el correo y da click en crear la cuenta
+        registration.enterEmailCreated();
+        registration.clickCreateAnAccount();
+        //Llena el formulario
+        registration.pressMrs();
+        registration.enterFirstName();
+        registration.enterLastName();
+        registration.enterPassword();
+        registration.enterDayOfBirth();
+        registration.enterMonthOfBirth();
+        registration.enterYearOfBirth();
+        registration.clickNewsletter();
+        registration.clickOffers();
+        //assert first and last name
+
+        //company
+        registration.enterCompany();
+        registration.enterAddress1();
+        registration.enterAddress2();
+        registration.enterCity();
+
+
+
+
+
+    }
+
+    /*If no email address is input on the text box or an invalid email address is
+    input (No @) and the “create account” button is clicked, a pop up displaying “invalid email
+    address” will be shown. */
+    @Test(testName = "R.3.1 General Rules") // Authentication
+    public static void enterInvalidData(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+        User_Story_Step_3 registration = new User_Story_Step_3();
+        //Ingresa primero a login page
+        Home_Page.Sign_in.click();
+        //Ingresa el correo y crea la cuenta
+        registration.enterEmailCreated();
+        registration.clickCreateAnAccount();
+        //Llena el formulario
+        registration.pressMrs();
+
 
 
 

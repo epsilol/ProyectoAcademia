@@ -2,6 +2,7 @@ package Steps;
 
 
 import Pages.Home_Page;
+import Pages.My_Account;
 
 import java.util.concurrent.TimeUnit;
 
@@ -9,6 +10,13 @@ import static Test.User_Story_Tests_7.driver;
 
 public class User_Story_Step_11 {
 
+    public void clickMyCostumerAccount(){
+        Home_Page.view_my_costumer_account.click();
+    }
+
+    public void clickMyPersonalInformation(){
+        My_Account.personal_info.click();
+    }
 
 
 

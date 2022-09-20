@@ -2,6 +2,7 @@ package Steps;
 
 
 import Pages.Home_Page;
+import Pages.Search_Page;
 
 import java.util.concurrent.TimeUnit;
 
@@ -9,37 +10,37 @@ import static Test.User_Story_Tests_7.driver;
 
 public class User_Story_Step_2 {
 
-
-
-
-    public void enterFirstName(){
-
-        Home_Page.first_name.sendKeys(Home_Page.FIRST_NAME);
-
+    public void dressSearch() {
+        Home_Page.Search_Bar.click();
+        Home_Page.Search_Bar.sendKeys("PRINTED DRESS");
+        Home_Page.Submit_Button_Search_Bar.click();
     }
 
-    public void enterLastName(){
-
-        Home_Page.last_name.sendKeys(Home_Page.LAST_NAME);
-
+    public void navDresses() throws InterruptedException {
+        Home_Page.Dresses_Button.click();
+        Thread.sleep(5000);
+        Home_Page.Logo.click();
+    }
+    public void navT_shirts() throws InterruptedException {
+        Home_Page.T_shirt_Button.click();
+        Thread.sleep(5000);
+        Home_Page.Logo.click();
+    }
+    public void navWomen() throws InterruptedException {
+        Home_Page.Women_Button.click();
+        Thread.sleep(5000);
+        Home_Page.Logo.click();
     }
 
-    public void enterJobTitle(){
 
-        Home_Page.job_title.sendKeys(Home_Page.JOB_TITLE);
-
+    public void gridDetails()throws InterruptedException{
+        Thread.sleep(1000);
+        Search_Page.Grid_Button.click();
     }
-
-    public void pressSubmitButton(){
-        Home_Page.submit_button.click();
-        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+    public void listDetails() throws InterruptedException {
+        Thread.sleep(1000);
+        Search_Page.List_Button.click();
     }
-
-    public void verifyAlertSuccess(){
-        Home_Page.alertSuccess.isDisplayed();
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-    }
-
 
 }
 

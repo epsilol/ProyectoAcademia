@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.nio.channels.Selector;
+
 public class Home_Page extends PageObject {
 
     public static String FIRST_NAME = "José";
@@ -39,13 +41,26 @@ public class Home_Page extends PageObject {
     @FindBy(xpath = "//a[contains(text(),'Add to cart')]")
     public static WebElement Add_to_cart;
 
+    @FindBy(xpath = "//*[@name='submit_search']")
+    public static WebElement Submit_Button_Search_Bar;
 
+    @FindBy(id = "search_query_top")
+    public static WebElement Search_Bar;
 
+    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[1]/a")
+    public static WebElement Women_Button;
 
+    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[2]/a")
+    public static WebElement Dresses_Button;
 
+    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[3]/a")
+    public static WebElement T_shirt_Button;
 
-    @FindBy(xpath = "//a[class='login']")
-    public static WebElement signIn_button;
+    @FindBy(id = "header_logo")
+    public static WebElement Logo;
+
+    @FindBy(xpath = "//*[@id='header']/div[2]/div/div/nav/div[1]/a")
+    public static WebElement view_my_costumer_account;
 
 
     public Home_Page(WebDriver driver) {

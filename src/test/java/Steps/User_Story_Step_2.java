@@ -36,7 +36,6 @@ public class User_Story_Step_2 {
     }
 
     public void verifyAlertSuccess(){
-
         Home_Page.alertSuccess.isDisplayed();
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
     }

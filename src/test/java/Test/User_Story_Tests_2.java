@@ -23,8 +23,22 @@ public class User_Story_Tests_2 {
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
 
-    }
 
+    }
+    @Test(testName = "Page Navigation")
+    public static void productDetails(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+
+
+    }
+    @Test(testName = "Page Navigation")
+    public static void browseProducts(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+
+
+    }
     @AfterSuite
     public static void cleanUp(){
         driver.manage().deleteAllCookies();

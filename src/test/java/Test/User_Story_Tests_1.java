@@ -24,8 +24,18 @@ public class User_Story_Tests_1 {
     public static void enterModifiedPage(){
         driver.get(Utils.MODIFIED_URL);
         Home_Page Home_Page = new Home_Page(driver);
-        User_Story_Step_1 Enter = new User_Story_Step_1();
-        Enter.timeOutStep1();
+    }
+
+    @Test(testName = "R.1 Page Access - Page opened") // Be able to visualize page with URL
+    public static void enterPage(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+    }
+
+    @Test(testName = "R.1 Maintenance") // Display 508 error
+    public static void reachResourceLimit(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
     }
 
     @AfterSuite

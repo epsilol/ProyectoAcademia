@@ -15,8 +15,7 @@ public class User_Story_Step_11 {
         Home_Page.view_my_costumer_account.click();
     }
 
-    public void clickMyPersonalInformation(){
-        My_Account.personal_info.click();
+    public void clickMyPersonalInformation(){My_Account.personal_info.click();
     }
 
     public void changeFirstName(){

@@ -2,6 +2,7 @@ package Test;
 
 import Pages.Login;
 import Pages.Home_Page;
+import Pages.Shopping_Cart;
 import Steps.User_Story_Step_7;
 import Utilerias.Utils;
 import org.openqa.selenium.WebDriver;
@@ -25,12 +26,14 @@ public class User_Story_Tests_7 {
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
         Login Login = new Login(driver);
+        Shopping_Cart Shopping_Cart = new Shopping_Cart(driver);
         User_Story_Step_7 LogUser = new User_Story_Step_7();
         LogUser.ClickSignIn();
         LogUser.EnterUser();
         LogUser.EnterPassword();
         LogUser.SubmitButton();
-        LogUser.AddtoCart();
+        LogUser.clickLogo();
+        LogUser.clickAddCart();
     }
 
     @AfterSuite

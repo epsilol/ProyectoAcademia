@@ -46,7 +46,9 @@ public class Home_Page extends PageObject {
 
     @FindBy(id ="id=search_query_top")
     public static WebElement Search_Bar;
-
+    // find by class
+    @FindBy(className = "ajax_cart_no_product")
+    public static WebElement Cart;
 
     public Home_Page(WebDriver driver) {
         super(driver);

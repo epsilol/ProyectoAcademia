@@ -1,8 +1,9 @@
 package Steps;
 
-
+import Pages.Shopping_Cart;
 import Pages.Home_Page;
 import Pages.Login;
+import Test.User_Story_Tests_7;
 import Utilerias.Accounts;
 
 import java.util.concurrent.TimeUnit;
@@ -33,15 +34,25 @@ public class User_Story_Step_7 {
     public void SubmitButton(){
         Login.submit_button.click();
     }
-    //click on homepage login button
+
 
     public void AddtoCart(){
         Home_Page.Add_to_cart.click();
     }
 
-   // public void EnterUser(){
-   //    Home_Page.email.sendKeys("renegahe@gmail.com");
-   // }
+    public void clickAddCart(){
+        User_Story_Tests_7.driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        Shopping_Cart.AddItem.click();
+
+    }
+
+    //click on homepage logO button
+
+    public void clickLogo(){
+        Login.Logo.click();
+    }
+
+
 
 }
 

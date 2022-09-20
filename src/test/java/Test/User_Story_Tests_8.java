@@ -2,11 +2,16 @@ package Test;
 
 
 import Pages.Home_Page;
+import Pages.Login;
 import Steps.User_Story_Step_7;
 import Steps.User_Story_Step_8;
 import Utilerias.Utils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -21,21 +26,27 @@ public class User_Story_Tests_8 {
             System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-    @Test(testName = "Submit a Pages.Home_Page") // poner aqui de que se trata caso de prueba
-    public static void addProducts(){     //submit form cambiar nombre de funcion NO LLAMARSE IGUAL
+    @Test(testName="R8.1 Contactcustomersupport")//poneraquidequesetratacasodeprueba
+    publicstaticvoidContactCustomerSupport(){//submitformcambiarnombredefuncionNOLLAMARSEIGUAL
         driver.get(Utils.BASE_URL);
-        Home_Page Home_Page = new Home_Page(driver);
-        User_Story_Step_8 Shop = new User_Story_Step_8();
-        Shop.enterFirstName();
-        Shop.enterLastName();
-        Shop.enterJobTitle();
-        Shop.pressSubmitButton();
-
-       Shop.verifyAlertSuccess();
+        Home_Page Home_Page= new Home_Page(driver);
+        Login Login = new Login(driver);
+        //ContactUsContact_Us=newContactUs(driver);
+        User_Story_Step_8 ContactUs = new User_Story_Step_8();
+        ContactUs.ClickContactUs();
+        ContactUs.HeadingDropDown();
+        WebDriverWait wait = new WebDriverWait(driver,100);
+        WebElement DropDown = driver.findElement(By.id(("id_contact"));
+        Select select = new Select(DropDown);
+        select.selectByValue("2");
+        ContactUs.ContactUsEmail();
+        ContactUs.EnterEmail();
+        ContactUs.CustomerServiceEnterText();
+        ContactUs.CustomerServiceSend();
     }
 
     @AfterSuite
-    public static void cleanUp(){
+    publicstaticvoidcleanUp(){
         driver.manage().deleteAllCookies();
         driver.close();
     }

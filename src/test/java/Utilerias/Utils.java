@@ -5,4 +5,5 @@ public class Utils {
 
     public static String MODIFIED_URL = "http://automationpractice.com/home.php";
     public static String CHROME_DRIVER_LOCATION = "chromedriver";
+
 }

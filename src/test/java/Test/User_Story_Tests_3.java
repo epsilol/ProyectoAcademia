@@ -8,6 +8,7 @@ import Steps.User_Story_Step_3;
 import Utilerias.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -29,7 +30,7 @@ public class User_Story_Tests_3 {
         User_Story_Step_3 registration = new User_Story_Step_3();
         //Ingresa primero a login page
         Home_Page.Sign_in.click();
-        //Ingresa el correo y crea la cuenta
+        //Ingresa el correo y da click en crear la cuenta
         registration.enterEmailCreated();
         registration.clickCreateAnAccount();
         //Llena el formulario
@@ -42,7 +43,13 @@ public class User_Story_Tests_3 {
         registration.enterYearOfBirth();
         registration.clickNewsletter();
         registration.clickOffers();
+        //assert first and last name
 
+        //company
+        registration.enterCompany();
+        registration.enterAddress1();
+        registration.enterAddress2();
+        registration.enterCity();
 
 
 

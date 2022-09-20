@@ -35,6 +35,24 @@ public class User_Story_Step_4 {
 
     public void ClickHomeUp(){ My_Account.home_up.click(); }
 
+    public void ClickWomen(){ My_Account.women_button.click(); }
+
+    public void ClickDresses(){ My_Account.dresses_button.click(); }
+
+    public void ClickShirts(){ My_Account.shirts_button.click(); }
+
+    public void ClickContactUs(){ My_Account.contact_us.click(); }
+
+    public void ClickSignOut(){ My_Account.sign_out.click(); }
+
+    public void ClickCustomerAccount(){ My_Account.customer_account.click(); }
+
+    public void ClickYourLogo(){ My_Account.your_logo.click(); }
+
+    public void ClickSearchButton(){ My_Account.submit_search_button.click(); }
+
+
+
     public void EnterUser(){
         Login.email.sendKeys(Accounts.EMAIL);
     }

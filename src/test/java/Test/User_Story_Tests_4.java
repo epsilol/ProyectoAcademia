@@ -12,6 +12,10 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
+import static Test.User_Story_Tests_7.driver;
+
 public class User_Story_Tests_4 {
     public static final WebDriver driver = new ChromeDriver();
 
@@ -27,18 +31,60 @@ public class User_Story_Tests_4 {
         Home_Page Home_Page = new Home_Page(driver);
         Login Login = new Login(driver);
         User_Story_Step_4 LogUser = new User_Story_Step_4();
-        LogUser.ClickSignIn(); //clic en sign in
+        LogUser.ClickSignIn();
         LogUser.EnterUser();
         LogUser.EnterPassword();
+        //driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
         LogUser.SubmitButton();
 
+    }
 
+    @Test(testName = "R4.3.0.1 Login with required files: no data")
+    public static void userNoCredentials(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+        Login Login = new Login(driver);
+        User_Story_Step_4 LogUser = new User_Story_Step_4();
+        LogUser.ClickSignIn();
+        LogUser.SubmitButton();
+        LogUser.NoAddressMessage();
 
     }
+
+    @Test(testName = "R4.3.1.1 Invalid email")
+    public static void userEmailWrong(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+        Login Login = new Login(driver);
+        User_Story_Step_4 LogUser = new User_Story_Step_4();
+        LogUser.ClickSignIn();
+        LogUser.EnterWrongUser();
+        LogUser.EnterPassword();
+        LogUser.CheckWrongMail();
+        LogUser.SubmitButton();
+        LogUser.MailErrorMessage();
+
+    }
+
+    @Test(testName = "R4.3.1.2 Invalid password")
+    public static void userPasswordWrong(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+        Login Login = new Login(driver);
+        User_Story_Step_4 LogUser = new User_Story_Step_4();
+        LogUser.ClickSignIn();
+        LogUser.EnterUser();
+        LogUser.EnterWrongPassword();
+        LogUser.SubmitButton();
+        LogUser.PassErrorMessage();
+
+    }
+
+
 
     @AfterSuite
     public static void cleanUp(){
         driver.manage().deleteAllCookies();
-        driver.close();
+        //driver.close();
     }
 }

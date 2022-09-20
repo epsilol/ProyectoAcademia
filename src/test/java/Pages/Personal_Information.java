@@ -16,31 +16,31 @@ public class Personal_Information extends PageObject {
     @FindBy(id = "id_gender2")
     public static WebElement Mrsbutton;
 
-    @FindBy(id = 'firstname')
+    @FindBy(id = "firstname")
     public static WebElement first_name;
 
-    @FindBy(id = 'lastname')
+    @FindBy(id = "lastname")
     public static WebElement last_name;
 
-    @FindBy(id = 'email')
+    @FindBy(id = "email")
     public static WebElement e_mail;
 
-    @FindBy(id = 'days')
+    @FindBy(id = "days")
     public static WebElement days;
 
-    @FindBy(id = 'months')
+    @FindBy(id = "months")
     public static WebElement months;
 
-    @FindBy(id = 'years')
+    @FindBy(id = "years")
     public static WebElement years;
 
-    @FindBy(id = 'old_passwd')
+    @FindBy(id = "old_passwd")
     public static WebElement old_password;
 
-    @FindBy(id = 'passwd')
+    @FindBy(id = "passwd")
     public static WebElement new_password;
 
-    @FindBy(id = 'confirmation')
+    @FindBy(id = "confirmation")
     public static WebElement password_confirmation;
 
     @FindBy(xpath = "//*[@id='center_column']/div/form/fieldset/div[11]/button/span")
@@ -51,4 +51,3 @@ public class Personal_Information extends PageObject {
     public Personal_Information (WebDriver driver) {
         super(driver);
     }
-}

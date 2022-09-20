@@ -15,13 +15,20 @@ public class User_Story_Step_2 {
         Home_Page.Submit_Button_Search_Bar.click();
     }
 
-    public void navDresses(){
-
+    public void navDresses() throws InterruptedException {
+        Home_Page.Dresses_Button.click();
+        Thread.sleep(5000);
+        Home_Page.Logo.click();
     }
-    public void navTshirts(){
-
-    }public void navWomen(){
-
+    public void navT_shirts() throws InterruptedException {
+        Home_Page.T_shirt_Button.click();
+        Thread.sleep(5000);
+        Home_Page.Logo.click();
+    }
+    public void navWomen() throws InterruptedException {
+        Home_Page.Women_Button.click();
+        Thread.sleep(5000);
+        Home_Page.Logo.click();
     }
 
 

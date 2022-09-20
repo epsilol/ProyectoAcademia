@@ -21,11 +21,16 @@ public class User_Story_Tests_2 {
     }
 
     @Test(testName = "Page Navigation")
-    public static void navigation(){
+    public static void navigation() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
-
-
+        User_Story_Step_2 Nav = new User_Story_Step_2();
+        Thread.sleep(2000);
+        Nav.navWomen();
+        Thread.sleep(2000);
+        Nav.navDresses();
+        Thread.sleep(2000);
+        Nav.navT_shirts();
     }
     @Test(testName = "Product Details")
     public static void productDetails(){
@@ -38,10 +43,10 @@ public class User_Story_Tests_2 {
     public static void browseProducts() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
-        Thread.sleep(5000);
         User_Story_Step_2 Search = new User_Story_Step_2();
-        Search.dressSearch();
         Thread.sleep(5000);
+        Search.dressSearch();
+        Thread.sleep(3000);
 
 
 

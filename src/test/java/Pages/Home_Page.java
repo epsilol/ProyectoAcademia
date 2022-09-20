@@ -47,6 +47,18 @@ public class Home_Page extends PageObject {
     @FindBy(id = "search_query_top")
     public static WebElement Search_Bar;
 
+    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[1]/a")
+    public static WebElement Women_Button;
+
+    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[2]/a")
+    public static WebElement Dresses_Button;
+
+    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[3]/a")
+    public static WebElement T_shirt_Button;
+
+    @FindBy(id = "header_logo")
+    public static WebElement Logo;
+
 
     public Home_Page(WebDriver driver) {
         super(driver);

@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 public class User_Story_Tests_8 {
+    //Test
     public static final WebDriver driver = new ChromeDriver();
 
     @BeforeSuite

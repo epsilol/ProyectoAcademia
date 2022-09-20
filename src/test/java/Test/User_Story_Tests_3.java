@@ -2,6 +2,7 @@ package Test;
 
 
 import Pages.Home_Page;
+import Pages.Registration;
 import Steps.User_Story_Step_1;
 import Steps.User_Story_Step_3;
 import Utilerias.Utils;
@@ -23,6 +24,7 @@ public class User_Story_Tests_3 {
     @Test(testName = "R.3.1 General Rules") // Authentication
     public static void createAnAccountPage(){
         driver.get(Utils.BASE_URL);
+        Registration reg = new Registration(driver);
         Home_Page Home_Page = new Home_Page(driver);
         User_Story_Step_3 registration = new User_Story_Step_3();
         //Ingresa primero a login page

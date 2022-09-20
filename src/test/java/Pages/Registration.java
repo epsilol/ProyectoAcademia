@@ -19,10 +19,10 @@ public class Registration extends PageObject {
     public static String PASSWORD = "Test123*";
 
 
-    @FindBy(id = "email_create")
+    @FindBy(xpath = "//input[@id='email_create']")
     public static WebElement email_create;
 
-    @FindBy(xpath = "//input[@name='SubmitCreate']")
+    @FindBy(id = "SubmitCreate")
     public static WebElement createAnAccountbtn;
 
 

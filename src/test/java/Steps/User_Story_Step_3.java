@@ -2,6 +2,7 @@ package Steps;
 
 
 import Pages.Home_Page;
+import Pages.Registration;
 
 import java.util.concurrent.TimeUnit;
 
@@ -10,23 +11,44 @@ import static Test.User_Story_Tests_7.driver;
 public class User_Story_Step_3 {
 
 
+    public void clickSignIn(){
+        Home_Page.Sign_in.click();
+    }
+    public void enterEmailCreated(){
 
+        Registration.email_create.sendKeys(Registration.EMAIL_CREATE);
+    }
+
+    public void clickCreateAnAccount(){
+
+        Registration.createAnAccountbtn.click();
+    }
+
+    public void pressMr(){
+
+        Registration.Mrbutton.click();
+    }
+
+    public void pressMrs(){
+
+        Registration.Mrsbutton.click();
+    }
 
     public void enterFirstName(){
 
-        Home_Page.first_name.sendKeys(Home_Page.FIRST_NAME);
+        Registration.first_name.sendKeys(Registration.FIRST_NAME);
 
     }
 
     public void enterLastName(){
 
-        Home_Page.last_name.sendKeys(Home_Page.LAST_NAME);
+        Registration.last_name.sendKeys(Registration.LAST_NAME);
 
     }
 
-    public void enterJobTitle(){
+    public void enterEmail(){
 
-        Home_Page.job_title.sendKeys(Home_Page.JOB_TITLE);
+        Registration.email_user.sendKeys(Registration.EMAIL);
 
     }
 

@@ -3,6 +3,7 @@ package Steps;
 
 import Pages.Home_Page;
 import Pages.My_Account;
+import Pages.Personal_Information;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,6 +19,33 @@ public class User_Story_Step_11 {
         My_Account.personal_info.click();
     }
 
+    public void changeFirstName(){
+        Personal_Information.first_name.sendKeys(Personal_Information.NEW_FIRST_NAME);
+    }
+
+    public void changeLastName(){
+        Personal_Information.last_name.sendKeys(Personal_Information.NEW_LAST_NAME);
+    }
+
+    public void changeDay(){
+        Personal_Information.days.sendKeys(Personal_Information.NEW_DAY);
+    }
+
+    public void changeMonth(){
+        Personal_Information.months.sendKeys(Personal_Information.NEW_MONTH);
+    }
+
+    public void changeYear(){
+        Personal_Information.years.sendKeys(Personal_Information.NEW_YEAR);
+    }
+
+    public void changeMail(){
+        Personal_Information.e_mail.sendKeys(Personal_Information.NEW_MAIL);
+    }
+
+    public void saveChanges(){
+        Personal_Information.save_info.click();
+    }
 
 
     public void enterFirstName(){
@@ -31,6 +59,7 @@ public class User_Story_Step_11 {
         Home_Page.last_name.sendKeys(Home_Page.LAST_NAME);
 
     }
+
 
     public void enterJobTitle(){
 

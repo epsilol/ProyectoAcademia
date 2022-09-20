@@ -8,6 +8,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class Personal_Information extends PageObject {
 
+    public static String NEW_MAIL = "charles@test.com";
+    public static String NEW_FIRST_NAME = "Charles";
+    public static String NEW_LAST_NAME = "Rodriguez";
+    public static String NEW_DAY = "18";
+    public static String NEW_MONTH = "November";
+    public static String NEW_YEAR = "1996";
+
     //Objetos de la pagina "Your Personal Information" para requirement 11
 
     @FindBy(id = "id_gender1")

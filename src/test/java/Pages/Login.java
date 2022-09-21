@@ -41,6 +41,7 @@ public class Login extends PageObject {
     @FindBy(xpath = "//*[@class = 'alert alert-danger']//ol//li[contains(text(),'Authentication failed')]")
     public static WebElement authentication_failed;
 
+
     public Login(WebDriver driver) {
         super(driver);
     }

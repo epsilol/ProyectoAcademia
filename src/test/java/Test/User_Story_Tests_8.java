@@ -43,7 +43,7 @@ public class User_Story_Tests_8 {
         ContactUs.EnterEmail();
         ContactUs.CustomerServiceEnterText();
         WebElement Text = driver.findElement(By.id("message"));
-        Text.sendKeys("Test");
+        Text.sendKeys("Test: client complaint will go here");
         ContactUs.CustomerServiceSend();
     }
 

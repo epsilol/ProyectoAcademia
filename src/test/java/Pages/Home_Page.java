@@ -62,6 +62,24 @@ public class Home_Page extends PageObject {
     @FindBy(xpath = "//*[@id='header']/div[2]/div/div/nav/div[1]/a")
     public static WebElement view_my_costumer_account;
 
+    @FindBy(xpath="//*[@id='contact-link']/a")
+    public static WebElement contactUs_button;
+
+    @FindBy(xpath="//*[@id='id_contact']")
+    public static WebElement HeadingDropDown;
+
+    @FindBy(xpath="//*[@id='uniform-id_contact']/span")
+    public static WebElement chooseDropDown;
+
+    @FindBy(xpath="//*[@id='email']")
+    public static WebElement ContactUsEmail;
+
+    @FindBy(xpath="//*[@id='message']")
+    public static WebElement CustomerServiceEnterText;
+
+    @FindBy(xpath="//*[@id='submitMessage']/span")
+    public static WebElement CustomerServiceSend;
+
 
     public Home_Page(WebDriver driver) {
         super(driver);

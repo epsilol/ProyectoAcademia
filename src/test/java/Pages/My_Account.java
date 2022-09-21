@@ -46,6 +46,32 @@ public class My_Account extends PageObject {
     @FindBy(xpath = "//a[class='login']")
     public static WebElement signIn_button;
 
+    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[1]/a")
+    public static WebElement women_button;
+
+    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[2]/a")
+    public static WebElement dresses_button;
+
+    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[3]/a")
+    public static WebElement shirts_button;
+
+    @FindBy(xpath = "//*[@id='contact-link']")
+    public static WebElement contact_us;
+
+    @FindBy(xpath = "//*[@class = 'logout']")
+    public static WebElement sign_out;
+
+    @FindBy(xpath = "//*[@class = 'header_user_info']")
+    public static WebElement customer_account;
+
+    @FindBy(xpath = "//*[@class = 'logo img-responsive']")
+    public static WebElement your_logo;
+
+    @FindBy(xpath = "//*[@class = 'btn btn-default button-search']")
+    public static WebElement submit_search_button;
+
+    @FindBy(xpath = "//*[@class = 'search_query form-control ac_input']")
+    public static WebElement search_bar;
 
     public My_Account(WebDriver driver) {
         super(driver);

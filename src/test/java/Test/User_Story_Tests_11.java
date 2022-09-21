@@ -2,7 +2,9 @@ package Test;
 
 
 import Pages.Home_Page;
+import Pages.Login;
 import Steps.User_Story_Step_11;
+import Steps.User_Story_Step_4;
 import Steps.User_Story_Step_7;
 import Utilerias.Utils;
 import org.openqa.selenium.WebDriver;
@@ -20,17 +22,24 @@ public class User_Story_Tests_11 {
             System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-    @Test(testName = "Submit a Pages.Home_Page") // poner aqui de que se trata caso de prueba
-    public static void addProducts(){     //submit form cambiar nombre de funcion NO LLAMARSE IGUAL
+    @Test(testName = "R.11 Check user information")
+    public static void checkInfo(){
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
-        User_Story_Step_11 Shop = new User_Story_Step_11();
-        Shop.enterFirstName();
-        Shop.enterLastName();
-        Shop.enterJobTitle();
-        Shop.pressSubmitButton();
+        Login Login = new Login(driver);
+        User_Story_Step_4 LogUser = new User_Story_Step_4();
+        User_Story_Step_11 CheckInformation = new User_Story_Step_11();
+        LogUser.ClickSignIn();
+        LogUser.EnterUser();
+        LogUser.EnterPassword();
+        LogUser.SubmitButton();
+    }
 
-       Shop.verifyAlertSuccess();
+    @Test(testName = "R.11 Edit user information")
+    public static void addProducts(){
+        driver.get(Utils.BASE_URL);
+        Home_Page Home_Page = new Home_Page(driver);
+
     }
 
     @AfterSuite

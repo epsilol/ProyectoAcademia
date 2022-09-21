@@ -31,6 +31,9 @@ public class Home_Page extends PageObject {
     @FindBy(xpath = "//div[contains(text(),'The form was successfully submitted!')]")
     public static WebElement alertSuccess;
 
+    @FindBy(xpath = "//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")
+    public static WebElement signOut_button;
+
 
     //AQUI PUEDEN PONER SUS OBJETOS RECUERDEN PONERLOS PUBLIC STATIC
 

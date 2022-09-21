@@ -76,4 +76,10 @@ public class My_Account extends PageObject {
     public My_Account(WebDriver driver) {
         super(driver);
     }
+
+    @FindBy(xpath = "//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")
+    public static WebElement signOut_button;
+
+    @FindBy(xpath = "//*[@id=\"center_column\"]/div/div[1]/ul/li[4]/a/span")
+    public static WebElement my_personal_info;
 }

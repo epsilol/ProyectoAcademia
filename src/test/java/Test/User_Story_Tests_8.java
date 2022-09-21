@@ -1,6 +1,8 @@
 package Test;
 
 
+import Pages.Customer_Service;
+import Pages.Customer_Support;
 import Pages.Home_Page;
 import Pages.Login;
 import Steps.User_Story_Step_7;
@@ -28,7 +30,7 @@ public class User_Story_Tests_8 {
     @Test(testName="R8.1 Contact customer support")  //poner aqui de que se trata caso de prueba
     public static void ContactCustomerSupport(){    // cambiar nombre de funcion NO LLAMARSE IGUAL
         driver.get(Utils.BASE_URL);
-        Home_Page Home_Page = new Home_Page(driver);
+        Customer_Support Customer_Support = new Customer_Support(driver);
         Login Login = new Login(driver);
         //ContactUs Contact_Us = new ContactUs(driver);
         User_Story_Step_8 ContactUs = new User_Story_Step_8();
@@ -41,6 +43,8 @@ public class User_Story_Tests_8 {
         ContactUs.ContactUsEmail();
         ContactUs.EnterEmail();
         ContactUs.CustomerServiceEnterText();
+        WebElement Text = driver.findElement(By.id("message"));
+        Text.sendKeys("Test");
         ContactUs.CustomerServiceSend();
     }
 

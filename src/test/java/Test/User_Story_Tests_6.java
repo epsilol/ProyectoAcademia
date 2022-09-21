@@ -25,7 +25,7 @@ public class User_Story_Tests_6 {
 
 
 
-    @Test (testName = "mientras")
+    @Test (testName = "Addresses")
     public static void LogIn (){
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);

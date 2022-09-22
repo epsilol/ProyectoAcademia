@@ -11,13 +11,10 @@ import static Test.User_Story_Tests_3.driver;
 
 public class Registration extends PageObject {
 
-    public static String EMAIL_NEWACC = "danna@test.com";
+    public static String EMAIL_NEWACC = "test216@test.com";
+    public static String WRONG_EMAIL = "dannatest.com";
     public static String FIRST_NAME = "Danna";
     public static String LAST_NAME = "López";
-    public static String EMAIL = "danna@test.com";
-    public static String DAY = "11";
-    public static String MONTH = "October";
-    public static String YEAR = "1997";
 
     public static String COMPANY = "TEST CO";
 
@@ -27,7 +24,7 @@ public class Registration extends PageObject {
     public static String ADDRESS_2 = "Independencia";
     public static String CITY = "Dallas";
     public static String STATE = "Texas";
-    public static String POSTAL_CODE = "2345";
+    public static String POSTAL_CODE = "00000";
     public static String COUNTRY = "United States";
     public static String ADDINFO = "Test";
     public static String HOME_PHONE = "1234567890";
@@ -35,9 +32,11 @@ public class Registration extends PageObject {
     public static String ALIAS = "Home";
 
 
-
     @FindBy(xpath = "//input[@id='email_create']")
     public static WebElement email_create;
+
+    @FindBy(xpath = "//li[contains(text(),'Invalid email address.')]")
+    public  static WebElement invalidEmailMsg;
 
     @FindBy(id = "SubmitCreate")
     public static WebElement createAnAccountbtn;
@@ -66,7 +65,6 @@ public class Registration extends PageObject {
 
     @FindBy(id = "days")
     public static WebElement day;
-
 
     @FindBy(id = "months")
     public static WebElement month;
@@ -133,6 +131,9 @@ public class Registration extends PageObject {
 
     @FindBy(xpath = "//h3[contains(text(),'Your personal information')]")
     public static WebElement personalInfoHeader;
+
+    @FindBy(xpath = "//h1[contains(text(),'My account')]")
+    public static WebElement myAccountHeader;
 
 
     public Registration(WebDriver driver) {

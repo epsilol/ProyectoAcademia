@@ -1,7 +1,10 @@
 package Steps;
 
 
+import Pages.Customer_Support;
 import Pages.Home_Page;
+import Pages.Login;
+import Utilerias.Accounts;
 
 import java.util.concurrent.TimeUnit;
 
@@ -9,41 +12,30 @@ import static Test.User_Story_Tests_7.driver;
 
 public class User_Story_Step_8 {
 
-
-
-
-    public void enterFirstName(){
-
-        Home_Page.first_name.sendKeys(Home_Page.FIRST_NAME);
-
+    public void ClickContactUs(){
+        Customer_Support.contactUs_button.click();
     }
 
-    public void enterLastName(){
-
-        Home_Page.last_name.sendKeys(Home_Page.LAST_NAME);
-
+    public void HeadingDropDown(){
+        Customer_Support.HeadingDropDown.click();
     }
 
-    public void enterJobTitle(){
-
-        Home_Page.job_title.sendKeys(Home_Page.JOB_TITLE);
-
+    public void ChooseDropDown(){
+        Customer_Support.chooseDropDown.click();
     }
 
-    public void pressSubmitButton(){
-        Home_Page.submit_button.click();
-        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+    public void ContactUsEmail(){
+        Customer_Support.ContactUsEmail.click();
     }
 
-    public void verifyAlertSuccess(){
-
-        Home_Page.alertSuccess.isDisplayed();
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+    public void EnterEmail(){
+        Login.email.sendKeys(Accounts.EMAIL);
     }
 
+    public void CustomerServiceEnterText(){
+        Customer_Support.CustomerServiceEnterText.click();
+    }
 
+    public void CustomerServiceSend(){Customer_Support.CustomerServiceSend.click();
+    }
 }
-
-    
-
-

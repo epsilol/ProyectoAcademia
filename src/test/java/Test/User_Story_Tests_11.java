@@ -9,6 +9,7 @@ import Steps.User_Story_Step_11;
 import Utilerias.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -54,7 +55,7 @@ public class User_Story_Tests_11 {
         logUser.EnterPassword();
         logUser.pressSubmitButton();
         logUser.ClickMyPersonalInfo();
-        logUser.editUserEmail();
+//        logUser.editUserEmail();
         logUser.editUserName();
         logUser.editUserLastName();
         logUser.editUserDayBirth();
@@ -65,9 +66,9 @@ public class User_Story_Tests_11 {
 
     }
 
-//    @AfterSuite
-//    public static void cleanUp(){
-//        driver.manage().deleteAllCookies();
-//        driver.close();
-//    }
+    @AfterSuite
+    public static void cleanUp(){
+        driver.manage().deleteAllCookies();
+        driver.close();
+    }
 }

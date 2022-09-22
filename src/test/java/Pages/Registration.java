@@ -11,8 +11,9 @@ import static Test.User_Story_Tests_3.driver;
 
 public class Registration extends PageObject {
 
-    public static String EMAIL_NEWACC = "test216@test.com";
+    public static String EMAIL_NEWACC = "test223@test.com";
     public static String WRONG_EMAIL = "dannatest.com";
+    public static String EXISTENT_EMAIL = "test216@test.com";
     public static String FIRST_NAME = "Danna";
     public static String LAST_NAME = "López";
 
@@ -32,6 +33,13 @@ public class Registration extends PageObject {
     public static String ALIAS = "Home";
 
 
+    //Your personal information
+
+    @FindBy(id = "id_gender1")
+    public static WebElement Mrbutton;
+
+    @FindBy(id = "id_gender2")
+    public static WebElement Mrsbutton;
     @FindBy(xpath = "//input[@id='email_create']")
     public static WebElement email_create;
 
@@ -44,12 +52,6 @@ public class Registration extends PageObject {
 
     @FindBy(xpath = "//a[contains(text(),'Submit')]")
     public static WebElement submit_button;
-
-    @FindBy(id = "id_gender1")
-    public static WebElement Mrbutton;
-
-    @FindBy(id = "id_gender2")
-    public static WebElement Mrsbutton;
 
     @FindBy(id = "customer_firstname")
     public static WebElement first_name;
@@ -78,6 +80,7 @@ public class Registration extends PageObject {
     @FindBy(id = "optin")
     public static WebElement offers_check;
 
+    //Your address section
     @FindBy(id = "firstname")
     public static WebElement first_name_reg;
 

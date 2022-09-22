@@ -19,7 +19,10 @@ public class User_Story_Step_3 {
         Home_Page.Sign_in.click();
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
     }
-    public void enterEmailCreated(){ Registration.email_create.sendKeys(Registration.EMAIL_NEWACC);}
+    public void enterEmailCreated(){
+        //validar una cuenta existente
+        Registration.email_create.sendKeys(Registration.EMAIL_NEWACC);
+    }
 
     public void enterPassword(){ Registration.password.sendKeys(Registration.PASSWORD);}
 
@@ -36,14 +39,14 @@ public class User_Story_Step_3 {
         Registration.Mrbutton.click();
     }
 
-    public void pressMrs(){
+    public void pressMrs() throws InterruptedException {
 
         Registration.Mrsbutton.click();
-        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+        Thread.sleep(5000);
     }
 
-    public void enterFirstName(){
-
+    public void enterFirstName() throws InterruptedException {
+        Thread.sleep(5000);
         Registration.first_name.sendKeys(Registration.FIRST_NAME);
 
     }
@@ -114,6 +117,7 @@ public class User_Story_Step_3 {
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
     }
 
+    //Validate that an invalid message is displayed
     public void invalidMessage(){
         String expectedHeading = "Invalid email address.";
 
@@ -125,6 +129,7 @@ public class User_Story_Step_3 {
             System.out.println("The expected heading doesn't match the actual heading "+heading);
     }
 
+    //Validate that My Account header is displayed
     public void myAccountHeader(){
         String expectedHeading = "Create an account";
 
@@ -134,6 +139,17 @@ public class User_Story_Step_3 {
             System.out.println("The expected heading is same as actual heading "+account);
         else
             System.out.println("The expected heading doesn't match the actual heading "+account);
+    }
+
+    public void firstNameAddress(){
+        String expectedFirstName = driver.findElement(By.xpath("firstname")).getText();
+
+        //Storing the text of the heading in a string
+        String firstnameAdd = driver.findElement(By.xpath("customer_firstname")).getText();
+        if(expectedFirstName.equalsIgnoreCase(firstnameAdd))
+            System.out.println("The expected first name is the same as the address section "+firstnameAdd);
+        else
+            System.out.println("The expected heading doesn't match the actual heading "+firstnameAdd);
     }
     public void verifyAlertSuccess(){
 

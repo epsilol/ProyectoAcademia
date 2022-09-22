@@ -31,5 +31,11 @@ public class User_Story_Tests_9 {
 
     }
 
+    @AfterSuite
+    public static void cleanUp(){
+        driver.manage().deleteAllCookies();
+        driver.close();
+    }
+
 
 }

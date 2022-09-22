@@ -13,11 +13,13 @@ import static Test.User_Story_Tests_5.driver;
 
 public class User_Story_Step_9 {
 
-    public void SearchProduct() {
+    public void SearchProduct() throws InterruptedException {
         Compare_Products_Page.Search_Bar.click();
         Compare_Products_Page.Search_Bar.sendKeys("Dress");
         Compare_Products_Page.Submit_Button_Search_Bar.click();
         Compare_Products_Page.ButtonAddCompare1.click();
+        Thread.sleep(15000);
+        Compare_Products_Page.ButtonPageCompare.click();
     }
 
     public void DeleteProduct() {

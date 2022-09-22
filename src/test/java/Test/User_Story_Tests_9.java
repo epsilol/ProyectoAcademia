@@ -19,7 +19,7 @@ public class User_Story_Tests_9 {
     }
 
     @Test(testName="Adding products to the comparison list ")
-    public static void AddProductsToCompare() {
+    public static void AddProductsToCompare() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Compare_Products_Page compare = new Compare_Products_Page(driver);
 
@@ -32,7 +32,7 @@ public class User_Story_Tests_9 {
     }
 
     @Test(testName="Delete products from comparison list ")
-    public static void DeleteProductsFromCompare() {
+    public static void DeleteProductsFromCompare() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Compare_Products_Page compare = new Compare_Products_Page(driver);
         User_Story_Step_9 compareItems = new User_Story_Step_9();

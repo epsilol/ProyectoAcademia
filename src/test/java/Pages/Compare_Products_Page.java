@@ -11,12 +11,6 @@ public class Compare_Products_Page extends PageObject {
         super(driver);
     }
 
-    @FindBy(xpath = "//*[@name='submit_search']")
-    public static WebElement Submit_Button_Search_Bar;
-
-    @FindBy(id = "search_query_top")
-    public static WebElement Search_Bar;
-
 
     @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li[1]/div/div[3]/div[2]/a")
     public static WebElement ButtonAddCompare1;
@@ -36,7 +30,6 @@ public class Compare_Products_Page extends PageObject {
 
     @FindBy(xpath = "//*[@id='social-share-compare']/p[2]/button[1]")
     public static WebElement Twitter_Share;
-
 
 
 }

@@ -1,17 +1,30 @@
 package Steps;
 
 
-import Pages.Compare_Productos_Page;
+import Pages.Compare_Products_Page;
 import Pages.Customer_Support;
+import Pages.Home_Page;
 import Pages.Login;
 import Utilerias.Accounts;
 
+import java.util.concurrent.TimeUnit;
+
+import static Test.User_Story_Tests_5.driver;
+
 public class User_Story_Step_9 {
 
-    public void SearchProduct(){
-        Compare_Productos_Page.Search_Bar.click();
-        Compare_Productos_Page.Search_Bar.sendKeys("Dress");
-        Compare_Productos_Page.Submit_Button_Search_Bar.click();
+    public void SearchProduct() {
+
+        Compare_Products_Page.Search_Bar.click();
+        Compare_Products_Page.Search_Bar.sendKeys("Dress");
+        Compare_Products_Page.Submit_Button_Search_Bar.click();
+
+        Compare_Products_Page.ButtonAddCompare1.click();
+
+
+
     }
+
+
 
 }

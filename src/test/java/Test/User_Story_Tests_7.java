@@ -122,10 +122,12 @@ public class User_Story_Tests_7 {
         Thread.sleep(6000);
         LogUser.clickContinueShopping();
 
-        //testcase 1
+        //testcase 4
 
         LogUser.clickShoppingCart();
         LogUser.clickProceedToCheckoutSummary();
+        LogUser.clickDropdownAddresses();
+        LogUser.clickDropdownAddressesValue2();
         LogUser.clickProceedToCheckoutAddress();
         LogUser.ClickTermsAndConditions();
         LogUser.clickProceedToCheckoutShipping();

@@ -6,14 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import java.util.Random;
 
 import static Test.User_Story_Tests_3.driver;
 
 public class Registration extends PageObject {
 
-    public static String EMAIL_NEWACC = "test223@test.com";
     public static String WRONG_EMAIL = "dannatest.com";
-    public static String EXISTENT_EMAIL = "test216@test.com";
     public static String FIRST_NAME = "Danna";
     public static String LAST_NAME = "López";
 
@@ -137,6 +136,17 @@ public class Registration extends PageObject {
 
     @FindBy(xpath = "//h1[contains(text(),'My account')]")
     public static WebElement myAccountHeader;
+
+    static int min = 1000;
+    static int max = 6000000;
+
+
+
+    static int random_user = (int)Math.floor(Math.random()*(max-min+1)+min);
+    static int random_domain = (int)Math.floor(Math.random()*(max-min+1)+min);
+
+
+    public static String EMAIL_RND = random_user + "@" + random_domain + ".com";
 
 
     public Registration(WebDriver driver) {

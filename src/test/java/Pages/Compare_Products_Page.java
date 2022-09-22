@@ -26,6 +26,13 @@ public class Compare_Products_Page extends PageObject {
     @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li[3]/div/div[3]/div[2]/a")
     public static WebElement ButtonAddCompare3;
 
+    @FindBy(xpath = "//*[@id='product_comparison']/tbody/tr[1]/td[2]/div[1]/a")
+    public static WebElement Delete_Button;
+
+    @FindBy(xpath = "//*[@id='social-share-compare']/p[2]/button[1]")
+    public static WebElement Twitter_Share;
+
+
 
 
 }

@@ -53,6 +53,18 @@ public class Home_Page extends PageObject {
     @FindBy(className = "ajax_cart_no_product")
     public static WebElement Cart;
 
+    @FindBy(id = "header_logo")
+    public static WebElement Logo;
+
+    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[2]/a")
+    public static WebElement Dresses_Button;
+
+    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[3]/a")
+    public static WebElement T_shirt_Button;
+
+    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[1]/a")
+    public static WebElement Women_Button;
+
     public Home_Page(WebDriver driver) {
         super(driver);
     }

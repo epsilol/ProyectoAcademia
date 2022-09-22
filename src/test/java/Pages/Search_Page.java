@@ -15,10 +15,4 @@ public class Search_Page extends PageObject{
     @FindBy(id = "list")
     public static WebElement List_Button;
 
-
-
-
-
-
-
 }

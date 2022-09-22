@@ -2,12 +2,13 @@ package Test;
 
 
 import Pages.Home_Page;
+import Pages.Login;
+import Pages.My_Account;
+import Pages.Personal_Information;
 import Steps.User_Story_Step_11;
-import Steps.User_Story_Step_7;
 import Utilerias.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -20,22 +21,53 @@ public class User_Story_Tests_11 {
             System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-    @Test(testName = "Submit a Pages.Home_Page") // poner aqui de que se trata caso de prueba
-    public static void addProducts(){     //submit form cambiar nombre de funcion NO LLAMARSE IGUAL
+    @Test(testName = "R11.1 User can verify their personal info")
+    public static void userVerifyInfo(){
         driver.get(Utils.BASE_URL);
-        Home_Page Home_Page = new Home_Page(driver);
-        User_Story_Step_11 Shop = new User_Story_Step_11();
-        Shop.enterFirstName();
-        Shop.enterLastName();
-        Shop.enterJobTitle();
-        Shop.pressSubmitButton();
+        Home_Page home_page = new Home_Page(driver);
+        My_Account my_account = new My_Account(driver);
+        Login Login = new Login(driver);
+        Personal_Information personal = new Personal_Information(driver);
+        User_Story_Step_11 logUser = new User_Story_Step_11();
+        logUser.ClickSignIn();
+        logUser.ClickSignIn();
+        logUser.EnterUser();
+        logUser.EnterPassword();
+        logUser.pressSubmitButton();
+        logUser.ClickMyPersonalInfo();
+        logUser.addPasswordToSave();
+        logUser.clickOnSaveChanges();
 
-       Shop.verifyAlertSuccess();
     }
 
-    @AfterSuite
-    public static void cleanUp(){
-        driver.manage().deleteAllCookies();
-        driver.close();
+    @Test(testName = "R11.2 User can modify their personal info")
+    public static void userEditPersonalInfo(){
+        driver.get(Utils.BASE_URL);
+        Home_Page home_page = new Home_Page(driver);
+        My_Account my_account = new My_Account(driver);
+        Login Login = new Login(driver);
+        Personal_Information personal = new Personal_Information(driver);
+        User_Story_Step_11 logUser = new User_Story_Step_11();
+        logUser.ClickSignIn();
+        logUser.ClickSignIn();
+        logUser.EnterUser();
+        logUser.EnterPassword();
+        logUser.pressSubmitButton();
+        logUser.ClickMyPersonalInfo();
+        logUser.editUserEmail();
+        logUser.editUserName();
+        logUser.editUserLastName();
+        logUser.editUserDayBirth();
+        logUser.editUserMonthBirth();
+        logUser.editUserYearBirth();
+        logUser.addPasswordToSave();
+        logUser.clickOnSaveChanges();
+
     }
+
+//    @AfterSuite
+//    public static void cleanUp(){
+//        driver.manage().deleteAllCookies();
+//        driver.close();
+//    }
 }

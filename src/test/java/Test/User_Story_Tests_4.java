@@ -52,10 +52,8 @@ public class User_Story_Tests_4 {
         LogUser.EnterPassword();
         LogUser.CheckMailOk();
         LogUser.SubmitButton();
-        // LogUser.ClickShopCart();
-        // LogUser.ClickHomeBot();
-        LogUser.ClickHomeUp();
-
+        My_Account.search_bar.sendKeys("dress");
+        LogUser.ClickSearchButton();
 
     }
 

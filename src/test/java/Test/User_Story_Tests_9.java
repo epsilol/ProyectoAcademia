@@ -24,6 +24,8 @@ public class User_Story_Tests_9 {
         Compare_Products_Page compare = new Compare_Products_Page(driver);
 
         User_Story_Step_9 compareItems = new User_Story_Step_9();
+
+        //Busqueda y agregando productos
         compareItems.SearchProduct();
 
 

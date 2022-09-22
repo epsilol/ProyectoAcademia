@@ -155,11 +155,6 @@ public class User_Story_Tests_3 {
 
     }
 
-    /* If the user fails to correctly input one or more mandatory fields,
-    when clicking on the “register” button, the page will be reloaded, and a text
-    box will be displayed indicating the user in which field or fields they will
-    need to add or modify information to correctly create an account, */
-
     @AfterSuite
     public static void cleanUp(){
         driver.manage().deleteAllCookies();

@@ -18,8 +18,8 @@ public class User_Story_Tests_9 {
         System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-    @Test(testName="R9.1 Adding products to the comparison list ")
-    public static void AddProductsToCompare() {
+    @Test(testName="Adding products to the comparison list ")
+    public static void AddProductsToCompare() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Compare_Products_Page compare = new Compare_Products_Page(driver);
 
@@ -30,6 +30,37 @@ public class User_Story_Tests_9 {
 
 
     }
+
+
+
+    @Test(testName="Delete products from comparison list ")
+    public static void DeleteProductsFromCompare() throws InterruptedException {
+        driver.get(Utils.BASE_URL);
+        Compare_Products_Page compare = new Compare_Products_Page(driver);
+        User_Story_Step_9 compareItems = new User_Story_Step_9();
+
+        compareItems.SearchProduct();
+        Thread.sleep(5000);
+        compareItems.DeleteProduct();
+        Thread.sleep(5000);
+
+
+    }
+
+    @Test(testName="Share products from comparison list ")
+    public static void ShareProductsFromCompare() throws InterruptedException {
+        driver.get(Utils.BASE_URL);
+        Compare_Products_Page compare = new Compare_Products_Page(driver);
+        User_Story_Step_9 compareItems = new User_Story_Step_9();
+
+        compareItems.SearchProduct();
+        Thread.sleep(5000);
+        compareItems.ShareProduct();
+        Thread.sleep(5000);
+
+
+    }
+
 
     @AfterSuite
     public static void cleanUp(){

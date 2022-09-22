@@ -2,9 +2,7 @@ package Test;
 
 import Pages.Home_Page;
 import Pages.Search_Page;
-import Steps.User_Story_Step_1;
 import Steps.User_Story_Step_2;
-import Steps.User_Story_Step_3;
 import Utilerias.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,7 +15,6 @@ public class User_Story_Tests_2 {
 
     @BeforeSuite
     public static void main(String[] args) {
-        // ChromeDriver location set up in Utilerias.Utils class
         System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 

@@ -1,6 +1,7 @@
 package Steps;
 
 
+import Pages.Customer_Support;
 import Pages.Home_Page;
 import Pages.Login;
 import Utilerias.Accounts;
@@ -12,19 +13,19 @@ import static Test.User_Story_Tests_7.driver;
 public class User_Story_Step_8 {
 
     public void ClickContactUs(){
-        Home_Page.contactUs_button.click();
+        Customer_Support.contactUs_button.click();
     }
 
     public void HeadingDropDown(){
-        Home_Page.HeadingDropDown.click();
+        Customer_Support.HeadingDropDown.click();
     }
 
     public void ChooseDropDown(){
-        Home_Page.chooseDropDown.click();
+        Customer_Support.chooseDropDown.click();
     }
 
     public void ContactUsEmail(){
-        Home_Page.ContactUsEmail.click();
+        Customer_Support.ContactUsEmail.click();
     }
 
     public void EnterEmail(){
@@ -32,10 +33,9 @@ public class User_Story_Step_8 {
     }
 
     public void CustomerServiceEnterText(){
-        Home_Page.CustomerServiceEnterText.click();
+        Customer_Support.CustomerServiceEnterText.click();
     }
 
-    public void CustomerServiceSend(){
-        Home_Page.CustomerServiceSend.click();
+    public void CustomerServiceSend(){Customer_Support.CustomerServiceSend.click();
     }
 }

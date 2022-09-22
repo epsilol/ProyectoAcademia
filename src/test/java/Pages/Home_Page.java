@@ -31,6 +31,9 @@ public class Home_Page extends PageObject {
     @FindBy(xpath = "//div[contains(text(),'The form was successfully submitted!')]")
     public static WebElement alertSuccess;
 
+    @FindBy(xpath = "//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")
+    public static WebElement signOut_button;
+
 
     //AQUI PUEDEN PONER SUS OBJETOS RECUERDEN PONERLOS PUBLIC STATIC
 
@@ -46,40 +49,9 @@ public class Home_Page extends PageObject {
 
     @FindBy(id = "search_query_top")
     public static WebElement Search_Bar;
-
-    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[1]/a")
-    public static WebElement Women_Button;
-
-    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[2]/a")
-    public static WebElement Dresses_Button;
-
-    @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[3]/a")
-    public static WebElement T_shirt_Button;
-
-    @FindBy(id = "header_logo")
-    public static WebElement Logo;
-
-    @FindBy(xpath = "//*[@id='header']/div[2]/div/div/nav/div[1]/a")
-    public static WebElement view_my_costumer_account;
-
-    @FindBy(xpath="//*[@id='contact-link']/a")
-    public static WebElement contactUs_button;
-
-    @FindBy(xpath="//*[@id='id_contact']")
-    public static WebElement HeadingDropDown;
-
-    @FindBy(xpath="//*[@id='uniform-id_contact']/span")
-    public static WebElement chooseDropDown;
-
-    @FindBy(xpath="//*[@id='email']")
-    public static WebElement ContactUsEmail;
-
-    @FindBy(xpath="//*[@id='message']")
-    public static WebElement CustomerServiceEnterText;
-
-    @FindBy(xpath="//*[@id='submitMessage']/span")
-    public static WebElement CustomerServiceSend;
-
+    // find by class
+    @FindBy(className = "ajax_cart_no_product")
+    public static WebElement Cart;
 
     public Home_Page(WebDriver driver) {
         super(driver);

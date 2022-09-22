@@ -3,7 +3,11 @@ package Utilerias;
 public class Accounts {
     public static String USER_NAME = "Carlos";
 
+    public static String USER_NAME_EDIT = "Juan Carlos";
+
     public static String USER_LASTNAME = "Blood";
+
+    public static String USER_LASTNAME_EDIT = "Bloody";
     public static String EMAIL = "carlosnoesta@hotmail.com";
     public static String PASSWORD = "1234qwer";
     public static String WRONG_EMAIL1 = "carlosnoestahotmail.com";

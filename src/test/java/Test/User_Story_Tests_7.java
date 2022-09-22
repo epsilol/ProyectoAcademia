@@ -128,6 +128,7 @@ public class User_Story_Tests_7 {
         LogUser.clickProceedToCheckoutSummary();
         LogUser.clickDropdownAddresses();
         LogUser.clickDropdownAddressesValue2();
+        Thread.sleep(8000); //wait
         LogUser.clickProceedToCheckoutAddress();
         LogUser.ClickTermsAndConditions();
         LogUser.clickProceedToCheckoutShipping();

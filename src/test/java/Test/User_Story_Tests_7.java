@@ -32,23 +32,23 @@ public class User_Story_Tests_7 {
         Checkout Checkout = new Checkout(driver);
         Login Login = new Login(driver);
         Shopping_Cart Shopping_Cart = new Shopping_Cart(driver);
-        User_Story_Step_7 LogUser = new User_Story_Step_7();
+        User_Story_Step_7 Buy_process = new User_Story_Step_7();
         //setting up scenario 1
-        LogUser.ClickSignIn();
-        LogUser.EnterUser();
-        LogUser.EnterPassword();
-        LogUser.SubmitButton();
-        LogUser.clickLogo();
-        LogUser.clickAddCart();
+        Buy_process.ClickSignIn();
+        Buy_process.EnterUser();
+        Buy_process.EnterPassword();
+        Buy_process.SubmitButton();
+        Buy_process.clickLogo();
+        Buy_process.clickAddCart();
         Thread.sleep(6000);
 
         //testcase 1
-        LogUser.clickContinueShopping();
-        LogUser.clickShoppingCart();
-        LogUser.clickProceedToCheckoutSummary();
-        LogUser.clickProceedToCheckoutAddress();
-        LogUser.ClickTermsAndConditions();
-        LogUser.clickProceedToCheckoutShipping();
+        Buy_process.clickContinueShopping();
+        Buy_process.clickShoppingCart();
+        Buy_process.clickProceedToCheckoutSummary();
+        Buy_process.clickProceedToCheckoutAddress();
+        Buy_process.ClickTermsAndConditions();
+        Buy_process.clickProceedToCheckoutShipping();
     }
 
     @Test(testName = "R7.2  “No sign in” and “Cart” button shows quantity of products.")
@@ -59,23 +59,23 @@ public class User_Story_Tests_7 {
         Checkout Checkout = new Checkout(driver);
         Login Login = new Login(driver);
         Shopping_Cart Shopping_Cart = new Shopping_Cart(driver);
-        User_Story_Step_7 LogUser = new User_Story_Step_7();
+        User_Story_Step_7 Buy_process = new User_Story_Step_7();
         //setting up scenario 2
 
 
-        LogUser.clickAddCart();
+        Buy_process.clickAddCart();
         Thread.sleep(6000);
-        LogUser.clickContinueShopping();
+        Buy_process.clickContinueShopping();
         //assert Shopping_cart_number_of_products != 0;
-        LogUser.assertShoppingCartNumberProducts();
+        Buy_process.assertShoppingCartNumberProducts();
         //testcase 2
 
 
-        LogUser.clickShoppingCart();
-        LogUser.clickProceedToCheckoutSummary();
-        LogUser.sendKeysToEmailAddress();
-        LogUser.sendKeysToPassword();
-        LogUser.clickSubmitLogin2();
+        Buy_process.clickShoppingCart();
+        Buy_process.clickProceedToCheckoutSummary();
+        Buy_process.sendKeysToEmailAddress();
+        Buy_process.sendKeysToPassword();
+        Buy_process.clickSubmitLogin2();
 
     }
 
@@ -87,17 +87,17 @@ public class User_Story_Tests_7 {
         Checkout Checkout = new Checkout(driver);
         Login Login = new Login(driver);
         Shopping_Cart Shopping_Cart = new Shopping_Cart(driver);
-        User_Story_Step_7 LogUser = new User_Story_Step_7();
+        User_Story_Step_7 Buy_process = new User_Story_Step_7();
 
         //testcase 3
-        LogUser.clickAddCart();
+        Buy_process.clickAddCart();
         Thread.sleep(6000);
-        LogUser.clickContinueShopping();
-        LogUser.ClickSignIn();
-        LogUser.EnterUser();
-        LogUser.EnterPassword();
-        LogUser.SubmitButton();
-        LogUser.clickLogo();
+        Buy_process.clickContinueShopping();
+        Buy_process.ClickSignIn();
+        Buy_process.EnterUser();
+        Buy_process.EnterPassword();
+        Buy_process.SubmitButton();
+        Buy_process.clickLogo();
 
     }
 
@@ -111,27 +111,27 @@ public class User_Story_Tests_7 {
         Checkout Checkout = new Checkout(driver);
         Login Login = new Login(driver);
         Shopping_Cart Shopping_Cart = new Shopping_Cart(driver);
-        User_Story_Step_7 LogUser = new User_Story_Step_7();
+        User_Story_Step_7 Buy_process = new User_Story_Step_7();
         //setting up scenario 4
-        LogUser.ClickSignIn();
-        LogUser.EnterUser();
-        LogUser.EnterPassword();
-        LogUser.SubmitButton();
-        LogUser.clickLogo();
-        LogUser.clickAddCart();
+        Buy_process.ClickSignIn();
+        Buy_process.EnterUser();
+        Buy_process.EnterPassword();
+        Buy_process.SubmitButton();
+        Buy_process.clickLogo();
+        Buy_process.clickAddCart();
         Thread.sleep(6000);
-        LogUser.clickContinueShopping();
+        Buy_process.clickContinueShopping();
 
         //testcase 4
 
-        LogUser.clickShoppingCart();
-        LogUser.clickProceedToCheckoutSummary();
-        LogUser.clickDropdownAddresses();
-        LogUser.clickDropdownAddressesValue2();
+        Buy_process.clickShoppingCart();
+        Buy_process.clickProceedToCheckoutSummary();
+        Buy_process.clickDropdownAddresses();
+        Buy_process.clickDropdownAddressesValue2();
         Thread.sleep(8000); //wait
-        LogUser.clickProceedToCheckoutAddress();
-        LogUser.ClickTermsAndConditions();
-        LogUser.clickProceedToCheckoutShipping();
+        Buy_process.clickProceedToCheckoutAddress();
+        Buy_process.ClickTermsAndConditions();
+        Buy_process.clickProceedToCheckoutShipping();
     }
 
     @AfterSuite

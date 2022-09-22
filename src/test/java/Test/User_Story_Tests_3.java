@@ -117,7 +117,7 @@ public class User_Story_Tests_3 {
     }
 
     @Test(testName = "R.3.3 Registrering an account") // Authentication
-    public static void enterModifiedPage() throws InterruptedException {
+    public static void registreringAnAccount() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
         User_Story_Step_3 registration = new User_Story_Step_3();

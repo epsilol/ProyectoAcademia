@@ -21,7 +21,7 @@ public class User_Story_Step_3 {
     }
     public void enterEmailCreated(){
         //validar una cuenta existente
-        Registration.email_create.sendKeys(Registration.EMAIL_NEWACC);
+        Registration.email_create.sendKeys(Registration.EMAIL_RND);
     }
 
     public void enterPassword(){ Registration.password.sendKeys(Registration.PASSWORD);}
@@ -41,8 +41,8 @@ public class User_Story_Step_3 {
 
     public void pressMrs() throws InterruptedException {
 
-        Registration.Mrsbutton.click();
         Thread.sleep(5000);
+        Registration.Mrsbutton.click();
     }
 
     public void enterFirstName() throws InterruptedException {

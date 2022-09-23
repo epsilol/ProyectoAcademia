@@ -31,6 +31,7 @@ public class User_Story_Tests_3 {
         //Navigate to login page
         Home_Page.Sign_in.click();
         ////Enter an email and click to create the account
+        registration.verifyCreateAnAccountHeader();
         registration.enterEmailCreated();
         registration.clickCreateAnAccount();
         //Fill in "Your Personal Information"
@@ -55,6 +56,7 @@ public class User_Story_Tests_3 {
         registration.enterHomePhone();
         registration.enterMobilePhone();
         registration.enterAlias();
+        registration.verifyRequiredFieldMsg();
         registration.clickRegisterButton();
         //Validate that is redirected to shopping cart page
         registration.myShoppingCartPage();
@@ -71,6 +73,7 @@ public class User_Story_Tests_3 {
         //Navigate to login page
         Home_Page.Sign_in.click();
         //Enter an email and click to create the account
+        registration.verifyCreateAnAccountHeader();
         registration.enterWrongEmail();
         registration.clickCreateAnAccount();
         registration.invalidMessage();
@@ -86,6 +89,7 @@ public class User_Story_Tests_3 {
         //Navigate to login page
         Home_Page.Sign_in.click();
         //Enter an email and click to create the account
+        registration.verifyCreateAnAccountHeader();
         registration.clickCreateAnAccount();
         registration.invalidMessage();
 
@@ -100,6 +104,7 @@ public class User_Story_Tests_3 {
         //Navigate to login page
         Home_Page.Sign_in.click();
         //Enter an email and click to create the account
+        registration.verifyCreateAnAccountHeader();
         registration.enterEmailCreated();
         registration.clickCreateAnAccount();
         //Fill in "Your Personal Information"
@@ -120,6 +125,7 @@ public class User_Story_Tests_3 {
         registration.enterMobilePhone();
         registration.enterAlias();
         registration.clickRegisterButton();
+        registration.verifyRequiredFieldMsg();
     }
 
     @Test(testName = "R.3.3 Registrering an account") // Authentication
@@ -131,28 +137,14 @@ public class User_Story_Tests_3 {
         //Click to navigate to login page
         Home_Page.Sign_in.click();
         //Enter the email to register
+        registration.verifyCreateAnAccountHeader();
         registration.enterEmailCreated();
         registration.clickCreateAnAccount();
-        //Fill in your personal information
-        registration.enterFirstName();
-        registration.enterLastName();
-        //Leave password empty
-        registration.enterDayOfBirth();
-        registration.enterMonthOfBirth();
-        registration.enterYearOfBirth();
-        registration.clickNewsletter();
-        registration.clickOffers();
-        //Fill in "Your Address" section
-        registration.enterAddress1();
-        registration.enterCity();
-        registration.enterState();
-        registration.enterPostalCode();
-        registration.enterCountry();
-        registration.enterHomePhone();
-        registration.enterAlias();
+
+        //Leave the fields empty
         registration.clickRegisterButton();
-        //valida que es redirigido a my account
-        registration.verifyAlertMandatoryData();
+        registration.verifyRequiredFieldMsg();
+        registration.mandatoryDataMessage();
 
 
 

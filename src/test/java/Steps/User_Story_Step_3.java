@@ -142,15 +142,32 @@ public class User_Story_Step_3 {
             System.out.println("The expected heading doesn't match the actual heading "+shoppingCart);
     }
 
+    public void mandatoryDataMessage(){
+        String expectedmandatoryMsg = "password is required.";
+
+        //Storing the text of the heading in a string
+        String mandatoryMsg = driver.findElement(By.xpath("//b[contains(text(),'passwd')]")).getText();
+        if(expectedmandatoryMsg.equalsIgnoreCase(mandatoryMsg))
+            System.out.println("The expected message is same as actual message "+mandatoryMsg);
+        else
+            System.out.println("The expected message doesn't match the actual message "+mandatoryMsg);
+    }
+
     public void verifyAlertMandatoryData(){
 
         Registration.mandatoryDataMsg.isDisplayed();
         driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
     }
-    public void verifyAlertSuccess(){
+    public void verifyRequiredFieldMsg(){
 
-        Registration.invalidEmailMsg.isDisplayed();
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+        Registration.requiredMessage.isDisplayed();
+        driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
+    }
+
+    public void verifyCreateAnAccountHeader(){
+
+        Registration.createAnAccountHeader.isDisplayed();
+        driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
     }
 
 }

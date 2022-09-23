@@ -3,6 +3,7 @@ package Steps;
 
 import Pages.Compare_Products_Page;
 import Pages.Home_Page;
+import org.apache.maven.model.Reporting;
 
 public class User_Story_Step_9 {
 

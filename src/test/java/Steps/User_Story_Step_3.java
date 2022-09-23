@@ -153,10 +153,11 @@ public class User_Story_Step_3 {
             System.out.println("The expected message doesn't match the actual message "+mandatoryMsg);
     }
 
-    public void verifyAlertMandatoryData(){
+    public void verifyShoppingCartPage() throws InterruptedException {
 
-        Registration.mandatoryDataMsg.isDisplayed();
-        driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
+        Thread.sleep(5000);
+        Registration.shoppingCartHeader.isDisplayed();
+        System.out.println("The shopping cart page is displayed");
     }
     public void verifyRequiredFieldMsg(){
 

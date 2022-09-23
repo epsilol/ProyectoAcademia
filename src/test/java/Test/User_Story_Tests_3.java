@@ -59,7 +59,8 @@ public class User_Story_Tests_3 {
         registration.verifyRequiredFieldMsg();
         registration.clickRegisterButton();
         //Validate that is redirected to shopping cart page
-        registration.myShoppingCartPage();
+       // registration.myShoppingCartPage();
+        registration.verifyShoppingCartPage();
 
 
     }
@@ -154,6 +155,6 @@ public class User_Story_Tests_3 {
     @AfterSuite
     public static void cleanUp(){
         driver.manage().deleteAllCookies();
-      //  driver.close();
+        driver.close();
     }
 }

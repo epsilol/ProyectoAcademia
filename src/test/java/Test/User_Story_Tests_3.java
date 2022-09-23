@@ -56,7 +56,6 @@ public class User_Story_Tests_3 {
         registration.enterHomePhone();
         registration.enterMobilePhone();
         registration.enterAlias();
-        registration.verifyRequiredFieldMsg();
         registration.clickRegisterButton();
         //Validate that is redirected to shopping cart page
        // registration.myShoppingCartPage();
@@ -124,9 +123,10 @@ public class User_Story_Tests_3 {
         registration.enterPostalCode();
         registration.enterCountry();
         registration.enterMobilePhone();
+        registration.verifyRequiredPhone();
         registration.enterAlias();
         registration.clickRegisterButton();
-        registration.verifyRequiredFieldMsg();
+
     }
 
     @Test(testName = "R.3.3 Registrering an account") // Authentication
@@ -144,7 +144,6 @@ public class User_Story_Tests_3 {
 
         //Leave the fields empty
         registration.clickRegisterButton();
-        registration.verifyRequiredFieldMsg();
         registration.mandatoryDataMessage();
 
 

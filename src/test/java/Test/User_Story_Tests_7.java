@@ -9,9 +9,13 @@ import Steps.User_Story_Step_7;
 import Utilerias.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
+import static Pages.Checkout.Proceed_to_checkout_address;
 
 public class User_Story_Tests_7 {
     public static final WebDriver driver = new ChromeDriver();
@@ -131,6 +135,8 @@ public class User_Story_Tests_7 {
         Buy_process.clickDropdownAddresses();
         Buy_process.clickDropdownAddressesValue2();
         Thread.sleep(10000); //wait
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(Proceed_to_checkout_address));
         Buy_process.clickProceedToCheckoutAddress();
         Buy_process.ClickTermsAndConditions();
         Buy_process.clickProceedToCheckoutShipping();

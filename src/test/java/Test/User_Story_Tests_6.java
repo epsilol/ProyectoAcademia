@@ -1,16 +1,17 @@
 package Test;
 
+import Pages.AddMyAddress_Page;
 import Pages.Home_Page;
 import Pages.Login;
-import Steps.User_Story_Step_4;
 import Steps.User_Story_Step_6;
 import Utilerias.Utils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+import org.openqa.selenium.Alert;
+
 
 public class User_Story_Tests_6 {
     public static final WebDriver driver = new ChromeDriver();
@@ -21,55 +22,40 @@ public class User_Story_Tests_6 {
         System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-    @Test(testName = "R6.1 Add a new address") // poner aqui de que se trata caso de prueba
-    public static void userLoginn() {     //submit form cambiar nombre de funcion NO LLAMARSE IGUAL
+
+
+
+    @Test (testName = "Add and Delete Addresses")
+    public static void LogIn (){
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
         Login Login = new Login(driver);
-        User_Story_Step_4 LogUser = new User_Story_Step_4();
-        LogUser.ClickSignIn(); //clic en sign in
+        AddMyAddress_Page AddMyAddress_Page = new AddMyAddress_Page(driver);
+        User_Story_Step_6 LogUser = new User_Story_Step_6(driver);
+        LogUser.ClickSignIn();
         LogUser.EnterUser();
         LogUser.EnterPassword();
-        LogUser.SubmitButton();
-
-        WebElement clickToButtonMyAddresses = driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/div[1]/ul/li[3]/a/span"));
-        clickToButtonMyAddresses.click();
-
-        WebElement clickToButtonAddANewAddress = driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[2]/a/span"));
-        clickToButtonAddANewAddress.click();
-
+        LogUser.EnterSubmit();
+        LogUser.EnterMyAdresses();
+        LogUser.EnterAddMyAdresses();
+        LogUser.EnterFirstNameMyAddress();
+        LogUser.EnterLastNameMyAddress();
+        LogUser.EnterCompanyMyAddress();
+        LogUser.EnterAddressMyAddress();
+        LogUser.EnterCityMyAddress();
+        LogUser.EnterStateMyAddress();
+        LogUser.EnterZipcodeMyAddress();
+        LogUser.EnterCountryMyAddress();
+        LogUser.EnterPhoneMyAddress();
+        LogUser.EnterMobilePhoneMyAddress();
+        LogUser.EnterAliasMyAddress();
+        LogUser.EnterSubmitMyAddress();
+        LogUser.DeleteMyAddress();
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
     }
-
-    @Test
-    public void fillSignIn() throws InterruptedException {
-        driver.get(Utils.BASE_URL);
-        Home_Page Home_Page = new Home_Page(driver);
-        Login Login = new Login(driver);
-        User_Story_Step_4 LogUser = new User_Story_Step_4();
-        User_Story_Step_6 authPage = new User_Story_Step_6(driver);
-        LogUser.ClickSignIn(); //clic en sign in
-        LogUser.EnterUser();
-        LogUser.EnterPassword();
-        LogUser.SubmitButton();
-
-        WebElement clickToButtonMyAddresses = driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/div[1]/ul/li[3]/a/span"));
-        clickToButtonMyAddresses.click();
-
-        WebElement clickToButtonAddANewAddress = driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[2]/a/span"));
-        clickToButtonAddANewAddress.click();
-
-
-        //User_Story_Tests_6 mainPage = User_Story_Tests_6.initElements(driver, User_Story_Tests_6.class);
-        //User_Story_Step_6 authPage = User_Story_Tests_6.initElements(driver, User_Story_Step_6.class);
-
-        //mainPage.openSignInPage();
-        authPage.fillSignIn(
-                "Abdiel","Hernandez", "ACN", "Calle falsa 123", "Los Angeles", "California", "69852", "United States", "8117891234", "Domicilio 2");
-
-
+    @AfterTest
+    public void endSession() {
+        driver.quit();
     }
-
-
-
 }
-

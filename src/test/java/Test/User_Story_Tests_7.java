@@ -41,9 +41,11 @@ public class User_Story_Tests_7 {
         Buy_process.clickLogo();
         Buy_process.clickAddCart();
         Thread.sleep(6000);
+        Buy_process.clickContinueShopping();
+
 
         //testcase 1
-        Buy_process.clickContinueShopping();
+
         Buy_process.clickShoppingCart();
         Buy_process.clickProceedToCheckoutSummary();
         Buy_process.clickProceedToCheckoutAddress();
@@ -128,7 +130,7 @@ public class User_Story_Tests_7 {
         Buy_process.clickProceedToCheckoutSummary();
         Buy_process.clickDropdownAddresses();
         Buy_process.clickDropdownAddressesValue2();
-        Thread.sleep(8000); //wait
+        Thread.sleep(10000); //wait
         Buy_process.clickProceedToCheckoutAddress();
         Buy_process.ClickTermsAndConditions();
         Buy_process.clickProceedToCheckoutShipping();

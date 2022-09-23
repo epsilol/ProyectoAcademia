@@ -125,20 +125,16 @@ public class Registration extends PageObject {
     @FindBy(id = "submitAccount")
     public static WebElement register;
 
-    @FindBy(className = "alert alert-danger")
-    public static WebElement mandatoryDataMsg;
 
     @FindBy(xpath = "//span[contains(text(),'Required field')]")
     public static WebElement requiredMessage;
 
-    @FindBy(xpath = "///h1[contains(text(),'Create an account')]")
+    @FindBy(xpath = "//h3[contains(text(),'Create an account')]")
     public static WebElement createAnAccountHeader;
 
-    @FindBy(xpath = "//h3[contains(text(),'Your personal information')]")
-    public static WebElement personalInfoHeader;
+    @FindBy(xpath = "//span[contains(text(),'Your shopping cart')]")
+    public static WebElement shoppingCartHeader;
 
-    @FindBy(xpath = "//h1[contains(text(),'My account')]")
-    public static WebElement myAccountHeader;
 
     static int min = 1000;
     static int max = 6000000;

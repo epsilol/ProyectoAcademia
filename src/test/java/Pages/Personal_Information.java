@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class Personal_Information extends PageObject {
+    public Personal_Information(WebDriver driver) {
+        super(driver);
+    }
 
     public static String NEW_MAIL = "charles@test.com";
     public static String NEW_FIRST_NAME = "Charles";
@@ -53,7 +56,5 @@ public class Personal_Information extends PageObject {
     @FindBy(xpath = "//*[@id='center_column']/div/form/fieldset/div[11]/button/span")
     public static WebElement save_info;
 
-    public Personal_Information (WebDriver driver) {
-        super(driver);
-    }
+
     }

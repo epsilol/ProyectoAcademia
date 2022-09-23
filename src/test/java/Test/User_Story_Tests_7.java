@@ -41,9 +41,11 @@ public class User_Story_Tests_7 {
         Buy_process.clickLogo();
         Buy_process.clickAddCart();
         Thread.sleep(6000);
+        Buy_process.clickContinueShopping();
+
 
         //testcase 1
-        Buy_process.clickContinueShopping();
+
         Buy_process.clickShoppingCart();
         Buy_process.clickProceedToCheckoutSummary();
         Buy_process.clickProceedToCheckoutAddress();

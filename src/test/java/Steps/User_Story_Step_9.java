@@ -2,24 +2,20 @@ package Steps;
 
 
 import Pages.Compare_Products_Page;
-import Pages.Customer_Support;
 import Pages.Home_Page;
-import Pages.Login;
-import Utilerias.Accounts;
-
-import java.util.concurrent.TimeUnit;
-
-import static Test.User_Story_Tests_5.driver;
 
 public class User_Story_Step_9 {
 
     public void SearchProduct() throws InterruptedException {
-        Compare_Products_Page.Search_Bar.click();
-        Compare_Products_Page.Search_Bar.sendKeys("Dress");
-        Compare_Products_Page.Submit_Button_Search_Bar.click();
+       Home_Page.Search_Bar.click();
+        Home_Page.Search_Bar.sendKeys("Dress");
+        Home_Page.Submit_Button_Search_Bar.click();
         Compare_Products_Page.ButtonAddCompare1.click();
-        Thread.sleep(15000);
+        Thread.sleep(10000);
+        Compare_Products_Page.ButtonAddCompare2.click();
+        Thread.sleep(5000);
         Compare_Products_Page.ButtonPageCompare.click();
+        Thread.sleep(7000);
     }
 
     public void DeleteProduct() {

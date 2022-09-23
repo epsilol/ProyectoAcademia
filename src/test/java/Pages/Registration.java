@@ -37,7 +37,7 @@ public class Registration extends PageObject {
     @FindBy(id = "id_gender1")
     public static WebElement Mrbutton;
 
-    @FindBy(id = "id_gender2")
+    @FindBy(id = "uniform-id_gender2")
     public static WebElement Mrsbutton;
     @FindBy(xpath = "//input[@id='email_create']")
     public static WebElement email_create;
@@ -125,17 +125,15 @@ public class Registration extends PageObject {
     @FindBy(id = "submitAccount")
     public static WebElement register;
 
+    @FindBy(className = "alert alert-danger")
+    public static WebElement mandatoryDataMsg;
+
     @FindBy(xpath = "//span[contains(text(),'Required field')]")
     public static WebElement requiredMessage;
 
-    @FindBy(xpath = "///h1[contains(text(),'Create an account')]")
+    @FindBy(xpath = "//h3[contains(text(),'Create an account')]")
     public static WebElement createAnAccountHeader;
 
-    @FindBy(xpath = "//h3[contains(text(),'Your personal information')]")
-    public static WebElement personalInfoHeader;
-
-    @FindBy(xpath = "//h1[contains(text(),'My account')]")
-    public static WebElement myAccountHeader;
 
     static int min = 1000;
     static int max = 6000000;

@@ -5,6 +5,7 @@ import Pages.Home_Page;
 import Pages.Registration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
@@ -29,24 +30,23 @@ public class User_Story_Step_3 {
     public void enterWrongEmail(){ Registration.email_create.sendKeys(Registration.WRONG_EMAIL);}
 
     public void clickCreateAnAccount() throws InterruptedException {
-
+        Thread.sleep(15000);
         Registration.createAnAccountbtn.click();
-        Thread.sleep(5000);
     }
 
-    public void pressMr(){
-
+    public void pressMr() throws InterruptedException {
+        Thread.sleep(15000);
         Registration.Mrbutton.click();
     }
 
     public void pressMrs() throws InterruptedException {
 
-        Thread.sleep(5000);
+        Thread.sleep(15000);
         Registration.Mrsbutton.click();
     }
 
     public void enterFirstName() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(15000);
         Registration.first_name.sendKeys(Registration.FIRST_NAME);
 
     }
@@ -118,7 +118,8 @@ public class User_Story_Step_3 {
     }
 
     //Validate that an invalid message is displayed
-    public void invalidMessage(){
+    public void invalidMessage() throws InterruptedException {
+        Thread.sleep(15000);
         String expectedHeading = "Invalid email address.";
 
         //Storing the text of the heading in a string
@@ -129,32 +130,44 @@ public class User_Story_Step_3 {
             System.out.println("The expected heading doesn't match the actual heading "+heading);
     }
 
-    //Validate that My Account header is displayed
-    public void myAccountHeader(){
-        String expectedHeading = "Create an account";
+    //Validate that the shopping cart is displayed
+    public void myShoppingCartPage(){
+        String expectedHeading = "Your shopping cart";
 
         //Storing the text of the heading in a string
-        String account = driver.findElement(By.xpath("//h1[contains(text(),'Create an account')]")).getText();
-        if(expectedHeading.equalsIgnoreCase(account))
-            System.out.println("The expected heading is same as actual heading "+account);
+        String shoppingCart = driver.findElement(By.xpath("//span[contains(text(),'Your shopping cart')]")).getText();
+        if(expectedHeading.equalsIgnoreCase(shoppingCart))
+            System.out.println("The expected heading is same as actual heading "+shoppingCart);
         else
-            System.out.println("The expected heading doesn't match the actual heading "+account);
+            System.out.println("The expected heading doesn't match the actual heading "+shoppingCart);
     }
 
-    public void firstNameAddress(){
-        String expectedFirstName = driver.findElement(By.xpath("firstname")).getText();
+    public void mandatoryDataMessage(){
+        String expectedmandatoryMsg = "password is required.";
 
         //Storing the text of the heading in a string
-        String firstnameAdd = driver.findElement(By.xpath("customer_firstname")).getText();
-        if(expectedFirstName.equalsIgnoreCase(firstnameAdd))
-            System.out.println("The expected first name is the same as the address section "+firstnameAdd);
+        String mandatoryMsg = driver.findElement(By.xpath("//b[contains(text(),'passwd')]")).getText();
+        if(expectedmandatoryMsg.equalsIgnoreCase(mandatoryMsg))
+            System.out.println("The expected message is same as actual message "+mandatoryMsg);
         else
-            System.out.println("The expected heading doesn't match the actual heading "+firstnameAdd);
+            System.out.println("The expected message doesn't match the actual message "+mandatoryMsg);
     }
-    public void verifyAlertSuccess(){
 
-        Registration.invalidEmailMsg.isDisplayed();
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+    public void verifyAlertMandatoryData(){
+
+        Registration.mandatoryDataMsg.isDisplayed();
+        driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
+    }
+    public void verifyRequiredFieldMsg(){
+
+        Registration.requiredMessage.isDisplayed();
+        driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
+    }
+
+    public void verifyCreateAnAccountHeader(){
+
+        Registration.createAnAccountHeader.isDisplayed();
+        driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
     }
 
 }

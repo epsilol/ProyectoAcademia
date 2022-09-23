@@ -22,19 +22,19 @@ public class User_Story_Tests_3 {
             System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-    //pendiente por el correo existente
-    @Test(testName = "R.3.1 General Rules") // Authentication
+    @Test(testName = "R.3 User Registration") // Authentication
     public static void createAnAccountPage() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Registration reg = new Registration(driver);
         Home_Page Home_Page = new Home_Page(driver);
         User_Story_Step_3 registration = new User_Story_Step_3();
-        //Ingresa primero a login page
+        //Navigate to login page
         Home_Page.Sign_in.click();
-        //Ingresa el correo y da click en crear la cuenta
+        ////Enter an email and click to create the account
+        registration.verifyCreateAnAccountHeader();
         registration.enterEmailCreated();
         registration.clickCreateAnAccount();
-        //Llena el formulario
+        //Fill in "Your Personal Information"
         registration.pressMrs();
         registration.enterFirstName();
         registration.enterLastName();
@@ -44,9 +44,7 @@ public class User_Story_Tests_3 {
         registration.enterYearOfBirth();
         registration.clickNewsletter();
         registration.clickOffers();
-        //assert first and last name
-
-        //continua llenando el formulario
+        //Fill in "Your Address" section
         registration.enterCompany();
         registration.enterAddress1();
         registration.enterAddress2();
@@ -58,41 +56,58 @@ public class User_Story_Tests_3 {
         registration.enterHomePhone();
         registration.enterMobilePhone();
         registration.enterAlias();
+        registration.verifyRequiredFieldMsg();
         registration.clickRegisterButton();
-        //Valida que es redirigido a my account
-        registration.myAccountHeader();
+        //Validate that is redirected to shopping cart page
+        registration.myShoppingCartPage();
 
 
     }
 
-    @Test(testName = "R.3.1 General Rules Invalid Email") // Authentication
+    @Test(testName = "R.3.1 General Rules") // Authentication
     public static void enterInvalidEmail() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Registration reg = new Registration(driver);
         Home_Page Home_Page = new Home_Page(driver);
         User_Story_Step_3 registration = new User_Story_Step_3();
-        //Ingresa primero a login page
+        //Navigate to login page
         Home_Page.Sign_in.click();
-        //Ingresa el correo y da click en crear la cuenta
+        //Enter an email and click to create the account
+        registration.verifyCreateAnAccountHeader();
         registration.enterWrongEmail();
         registration.clickCreateAnAccount();
         registration.invalidMessage();
 
     }
 
-    //afecta lo mismo del correo
+    @Test(testName = "R.3.1 General Rules - Email empty") // Authentication
+    public static void emailFieldEmpty() throws InterruptedException {
+        driver.get(Utils.BASE_URL);
+        Registration reg = new Registration(driver);
+        Home_Page Home_Page = new Home_Page(driver);
+        User_Story_Step_3 registration = new User_Story_Step_3();
+        //Navigate to login page
+        Home_Page.Sign_in.click();
+        //Enter an email and click to create the account
+        registration.verifyCreateAnAccountHeader();
+        registration.clickCreateAnAccount();
+        registration.invalidMessage();
+
+    }
+
     @Test(testName = "R3.2 Mandatory data and Optional user Data") // Authentication
     public static void enterMandatoryData() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Registration reg = new Registration(driver);
         Home_Page Home_Page = new Home_Page(driver);
         User_Story_Step_3 registration = new User_Story_Step_3();
-        //Click to navigate to login page
+        //Navigate to login page
         Home_Page.Sign_in.click();
-        //Enter the email to register
+        //Enter an email and click to create the account
+        registration.verifyCreateAnAccountHeader();
         registration.enterEmailCreated();
         registration.clickCreateAnAccount();
-        //Fill in your personal information
+        //Fill in "Your Personal Information"
         registration.enterFirstName();
         registration.enterLastName();
         registration.enterPassword();
@@ -101,19 +116,16 @@ public class User_Story_Tests_3 {
         registration.enterYearOfBirth();
         registration.clickNewsletter();
         registration.clickOffers();
-        //continues filling your address section
-        //valida que aparezca el mismo nombre
-        registration.firstNameAddress();
+        //Fill in "Your Address" section
         registration.enterAddress1();
         registration.enterCity();
         registration.enterState();
         registration.enterPostalCode();
         registration.enterCountry();
-        registration.enterHomePhone();
+        registration.enterMobilePhone();
         registration.enterAlias();
         registration.clickRegisterButton();
-        //valida que es redirigido a my account
-        registration.myAccountHeader();
+        registration.verifyRequiredFieldMsg();
     }
 
     @Test(testName = "R.3.3 Registrering an account") // Authentication
@@ -125,30 +137,14 @@ public class User_Story_Tests_3 {
         //Click to navigate to login page
         Home_Page.Sign_in.click();
         //Enter the email to register
+        registration.verifyCreateAnAccountHeader();
         registration.enterEmailCreated();
         registration.clickCreateAnAccount();
-        //Fill in your personal information
-        registration.enterFirstName();
-        registration.enterLastName();
-        //Leave password empty
-        registration.enterDayOfBirth();
-        registration.enterMonthOfBirth();
-        registration.enterYearOfBirth();
-        registration.clickNewsletter();
-        registration.clickOffers();
-        //continues filling your address section
-        //valida que aparezca el mismo nombre
-        registration.firstNameAddress();
-        registration.enterAddress1();
-        registration.enterCity();
-        registration.enterState();
-        registration.enterPostalCode();
-        registration.enterCountry();
-        registration.enterHomePhone();
-        registration.enterAlias();
+
+        //Leave the fields empty
         registration.clickRegisterButton();
-        //valida que es redirigido a my account
-        registration.myAccountHeader();
+        registration.verifyRequiredFieldMsg();
+        registration.mandatoryDataMessage();
 
 
 

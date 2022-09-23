@@ -56,6 +56,6 @@ public class User_Story_Tests_6 {
     }
     @AfterTest
     public void endSession() {
-        //driver.quit();
+        driver.quit();
     }
 }

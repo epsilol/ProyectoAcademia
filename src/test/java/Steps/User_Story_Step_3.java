@@ -142,6 +142,7 @@ public class User_Story_Step_3 {
             System.out.println("The expected heading doesn't match the actual heading "+shoppingCart);
     }
 
+    //Validate that the message is not the same as the expected
     public void mandatoryDataMessage(){
         String expectedmandatoryMsg = "password is required.";
 
@@ -163,6 +164,12 @@ public class User_Story_Step_3 {
     public void verifyRequiredPhone(){
 
         Registration.phoneMessage.isDisplayed();
+        driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
+    }
+
+    public void verifyPassMsg(){
+
+        Registration.mandatoryMsgPass.isDisplayed();
         driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
     }
 

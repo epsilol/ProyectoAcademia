@@ -58,7 +58,6 @@ public class User_Story_Tests_3 {
         registration.enterAlias();
         registration.clickRegisterButton();
         //Validate that is redirected to shopping cart page
-       // registration.myShoppingCartPage();
         registration.verifyShoppingCartPage();
 
 
@@ -145,6 +144,7 @@ public class User_Story_Tests_3 {
         //Leave the fields empty
         registration.clickRegisterButton();
         registration.mandatoryDataMessage();
+        registration.verifyPassMsg();
 
 
 

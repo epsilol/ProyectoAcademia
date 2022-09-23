@@ -135,6 +135,9 @@ public class Registration extends PageObject {
     @FindBy(xpath = "//span[contains(text(),'Your shopping cart')]")
     public static WebElement shoppingCartHeader;
 
+    @FindBy(xpath = "//b[contains(text(),'passwd')]")
+    public static WebElement mandatoryMsgPass;
+
 
     static int min = 1000;
     static int max = 6000000;

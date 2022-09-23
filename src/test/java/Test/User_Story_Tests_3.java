@@ -154,6 +154,6 @@ public class User_Story_Tests_3 {
     @AfterSuite
     public static void cleanUp(){
         driver.manage().deleteAllCookies();
-        driver.close();
+        driver.quit();
     }
 }

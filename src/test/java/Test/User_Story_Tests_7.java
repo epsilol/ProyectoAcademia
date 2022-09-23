@@ -130,7 +130,7 @@ public class User_Story_Tests_7 {
         Buy_process.clickProceedToCheckoutSummary();
         Buy_process.clickDropdownAddresses();
         Buy_process.clickDropdownAddressesValue2();
-        Thread.sleep(8000); //wait
+        Thread.sleep(10000); //wait
         Buy_process.clickProceedToCheckoutAddress();
         Buy_process.ClickTermsAndConditions();
         Buy_process.clickProceedToCheckoutShipping();

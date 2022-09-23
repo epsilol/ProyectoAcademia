@@ -14,4 +14,5 @@ public class Accounts {
     public static String WRONG_PASS1 = "123";
     public static String EMAIL_NO_ACCOUNT = "carlosesta@hotmail.com";
     public static String PASSWORD_NO_ACCOUNT = "4321asdf";
+
 }

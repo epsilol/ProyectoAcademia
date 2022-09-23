@@ -31,7 +31,7 @@ public class User_Story_Tests_5 {
     }
 
     @Test(testName = "R5.2 / add item to the shopping cart ")
-    public static void addItem(WebDriver driver, WebElement element,int timeout,String value) {
+    public static void addItem() {
         driver.get(Utils.BASE_URL);
         Shopping_Cart shopping_cart = new Shopping_Cart(driver);
         User_Story_Step_5 cart = new User_Story_Step_5();

@@ -159,9 +159,10 @@ public class User_Story_Step_3 {
         Registration.shoppingCartHeader.isDisplayed();
         System.out.println("The shopping cart page is displayed");
     }
-    public void verifyRequiredFieldMsg(){
 
-        Registration.requiredMessage.isDisplayed();
+    public void verifyRequiredPhone(){
+
+        Registration.phoneMessage.isDisplayed();
         driver.manage().timeouts().implicitlyWait(15000, TimeUnit.SECONDS);
     }
 

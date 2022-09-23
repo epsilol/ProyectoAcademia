@@ -23,7 +23,7 @@ public class User_Story_Tests_9 {
     public static void AddProductsToCompare() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Compare_Products_Page compare = new Compare_Products_Page(driver);
-        Home_Page hp = new Home_Page(driver);
+        Home_Page hp = new Home_Page(driver);//Importanto HP
         User_Story_Step_9 compareItems = new User_Story_Step_9();
 
         //Busqueda y agregando productos a la lista de comparacion
@@ -38,6 +38,7 @@ public class User_Story_Tests_9 {
     public static void DeleteProductsFromCompare() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Compare_Products_Page compare = new Compare_Products_Page(driver);
+        Home_Page hp = new Home_Page(driver);
         User_Story_Step_9 compareItems = new User_Story_Step_9();
 
         compareItems.SearchProduct();
@@ -52,6 +53,7 @@ public class User_Story_Tests_9 {
     public static void ShareProductsFromCompare() throws InterruptedException {
         driver.get(Utils.BASE_URL);
         Compare_Products_Page compare = new Compare_Products_Page(driver);
+        Home_Page hp = new Home_Page(driver);
         User_Story_Step_9 compareItems = new User_Story_Step_9();
 
         compareItems.SearchProduct();

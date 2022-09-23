@@ -125,14 +125,15 @@ public class Registration extends PageObject {
     @FindBy(id = "submitAccount")
     public static WebElement register;
 
-    @FindBy(className = "alert alert-danger")
-    public static WebElement mandatoryDataMsg;
 
     @FindBy(xpath = "//span[contains(text(),'Required field')]")
     public static WebElement requiredMessage;
 
     @FindBy(xpath = "//h3[contains(text(),'Create an account')]")
     public static WebElement createAnAccountHeader;
+
+    @FindBy(xpath = "//span[contains(text(),'Your shopping cart')]")
+    public static WebElement shoppingCartHeader;
 
 
     static int min = 1000;

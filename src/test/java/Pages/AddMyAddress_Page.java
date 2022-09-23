@@ -57,5 +57,4 @@ public class AddMyAddress_Page extends PageObject {
     }
 
 
-    //UserStory6Fin
 }

@@ -25,7 +25,7 @@ public class User_Story_Tests_6 {
 
 
 
-    @Test (testName = "Addresses")
+    @Test (testName = "Add and Delete Addresses")
     public static void LogIn (){
         driver.get(Utils.BASE_URL);
         Home_Page Home_Page = new Home_Page(driver);
@@ -53,10 +53,9 @@ public class User_Story_Tests_6 {
         LogUser.DeleteMyAddress();
         Alert alert = driver.switchTo().alert();
         alert.accept();
-            }
+    }
     @AfterTest
     public void endSession() {
         //driver.quit();
     }
 }
-
